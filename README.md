@@ -12,9 +12,6 @@
             font-family: 'Prata', serif;
             scroll-behavior: smooth;
         }
-        .container {
-            width: 100%;
-        }
         .navbar {
             width: 100%;
             background-color: #000000;
@@ -50,53 +47,16 @@
             background-color: #cccccc;
             color: #000000;
         }
-        .section {
-            padding: 100px 20px 20px 20px; /* Add padding to compensate for fixed navbar */
-            min-height: 100vh;
+        .full-screen-image {
+            background-image: url('./images/nastiaHomepage.JPG');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-        .left {
-            background-color: #f0f0f0;
             text-align: center;
-        }
-        .left img {
-            max-width: 80%;
-            height: auto;
-        }
-        .left .caption {
-            margin-top: 20px;
-            font-size: 2em;
-        }
-        .right {
-            background-color: #000000;
             color: #ffffff;
-        }
-        .right .content {
-            color: #ffffff;
-        }
-        .right .buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .right .buttons button {
-            margin: 20px;
-            padding: 20px 40px;
-            font-size: 2em;
-            cursor: pointer;
-            font-family: 'Prata', serif;
-            color: #000000;
-            background-color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .right .buttons button:hover {
-            background-color: #cccccc;
-            color: #000000;
         }
         .about {
             background-color: #ffffff;
@@ -154,67 +114,35 @@
     <div class="navbar">
         <div class="logo">My Logo</div>
         <div class="nav-buttons">
-            <button onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})">Portfolio</button>
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
-            <button onclick="document.getElementById('section3').scrollIntoView({behavior: 'smooth'})">Section 3</button>
-            <button onclick="document.getElementById('section4').scrollIntoView({behavior: 'smooth'})">Section 4</button>
-            <button onclick="document.getElementById('section5').scrollIntoView({behavior: 'smooth'})">Section 5</button>
+            <!-- Add more buttons for other sections if needed -->
         </div>
     </div>
-    <div class="container">
-        <div id="portfolio" class="section">
+    <div class="full-screen-image">
+        <!-- You can add any additional content here if needed -->
+        <h1>Welcome to My Portfolio</h1>
+    </div>
+    <div id="about" class="about">
+        <h1>About Me</h1>
+        <div class="container">
             <div class="left">
-                <img src="your-image.jpg" alt="Your Picture">
-                <div class="caption">Anastasiia Udovenko</div>
+                <div class="image">
+                    <img src="./images/me.jph" alt="Headshot">
+                </div>
             </div>
             <div class="right">
-                <div class="buttons">
-                    <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
-                    <button onclick="document.getElementById('section3').scrollIntoView({behavior: 'smooth'})">Section 3</button>
-                    <button onclick="document.getElementById('section4').scrollIntoView({behavior: 'smooth'})">Section 4</button>
-                    <button onclick="document.getElementById('section5').scrollIntoView({behavior: 'smooth'})">Section 5</button>
-                </div>
-            </div>
-        </div>
-        <div id="about" class="section about">
-            <h1>About Me</h1>
-            <div class="container">
-                <div class="left">
-                    <div class="image">
-                        <img src="./images/headshot.JPG" alt="Headshot">
+                <div class="text">
+                    <div class="text-content">
+                        <p>Hello! My name is Anastasiia Udovenko, and I was born on October 23, 2002, in the charming town of Novomoskovsk, Ukraine. My journey into the world of performance arts began early. At the age of six, I started school, where I quickly discovered a passion for choreography and drawing, attending additional classes to hone my skills.</p>
+                        <p>A year later, my fascination with the circus led me to join the children's circus studio "Melange-art" in Novomoskovsk. This experience was transformative, and in 2016, as part of a talented group of neon jugglers, I had the thrilling opportunity to become a finalist on "Ukraine’s Got Talent. Kids."</p>
+                        <p>From 2017 to 2018, I expanded my horizons by working as a juggler and ballet dancer with the renowned Ukrainian circus "Kobzov." This period was incredibly enriching and solidified my love for the circus arts.</p>
+                        <p>In 2018, I took a significant step in my professional development by enrolling in the Kiev Municipal Academy of Circus and Performing Arts. I successfully graduated as a Junior Specialist and, in 2021, embarked on a Bachelor's degree. My studies have been comprehensive, covering juggling, contortion with hoops, acting, pantomime, and both classical and modern choreography.</p>
+                        <p>This is just the beginning of my adventure in the performing arts, and I am excited to see where this journey takes me next!</p>
                     </div>
                 </div>
-                <div class="right">
-                    <div class="text">
-                        <div class="text-content">
-                            <p>Hello! My name is Anastasiia Udovenko, and I was born on October 23, 2002, in the charming town of Novomoskovsk, Ukraine. My journey into the world of performance arts began early. At the age of six, I started school, where I quickly discovered a passion for choreography and drawing, attending additional classes to hone my skills.</p>
-                            <p>A year later, my fascination with the circus led me to join the children's circus studio "Melange-art" in Novomoskovsk. This experience was transformative, and in 2016, as part of a talented group of neon jugglers, I had the thrilling opportunity to become a finalist on "Ukraine’s Got Talent. Kids."</p>
-                            <p>From 2017 to 2018, I expanded my horizons by working as a juggler and ballet dancer with the renowned Ukrainian circus "Kobzov." This period was incredibly enriching and solidified my love for the circus arts.</p>
-                            <p>In 2018, I took a significant step in my professional development by enrolling in the Kiev Municipal Academy of Circus and Performing Arts. I successfully graduated as a Junior Specialist and, in 2021, embarked on a Bachelor's degree. My studies have been comprehensive, covering juggling, contortion with hoops, acting, pantomime, and both classical and modern choreography.</p>
-                            <p>This is just the beginning of my adventure in the performing arts, and I am excited to see where this journey takes me next!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="section3" class="section right">
-            <div class="content">
-                <h1>Section 3</h1>
-                <p>Content for section 3.</p>
-            </div>
-        </div>
-        <div id="section4" class="section right">
-            <div class="content">
-                <h1>Section 4</h1>
-                <p>Content for section 4.</p>
-            </div>
-        </div>
-        <div id="section5" class="section right">
-            <div class="content">
-                <h1>Section 5</h1>
-                <p>Content for section 5.</p>
             </div>
         </div>
     </div>
+    <!-- Add more sections for other content if needed -->
 </body>
 </html>
