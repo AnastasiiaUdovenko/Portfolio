@@ -112,7 +112,7 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="logo" 
+        <div class="logo">
             <img src="./images/logo.png" alt="Your Logo">
         </div>
         <div class="nav-buttons">
