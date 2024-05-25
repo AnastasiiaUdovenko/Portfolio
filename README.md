@@ -114,7 +114,7 @@
 <body>
     <div class="navbar">
         <div class="logo">
-            <img src="./images/logo.png" alt="Your Logo">
+            <img src="./images/logo.jpg" alt="Your Logo">
         </div>
         <div class="nav-buttons">
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
