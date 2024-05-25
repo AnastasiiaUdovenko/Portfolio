@@ -74,6 +74,30 @@
             background-color: #000000;
             color: #ffffff;
         }
+        .right .content {
+            color: #ffffff;
+        }
+        .right .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .right .buttons button {
+            margin: 20px;
+            padding: 20px 40px;
+            font-size: 2em;
+            cursor: pointer;
+            font-family: 'Prata', serif;
+            color: #000000;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .right .buttons button:hover {
+            background-color: #cccccc;
+            color: #000000;
+        }
         .about {
             background-color: #ffffff;
             color: #000000;
@@ -130,7 +154,7 @@
     <div class="navbar">
         <div class="logo">My Logo</div>
         <div class="nav-buttons">
-            <button onclick="document.getElementById('section1').scrollIntoView({behavior: 'smooth'})">Section 1</button>
+            <button onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})">Portfolio</button>
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
             <button onclick="document.getElementById('section3').scrollIntoView({behavior: 'smooth'})">Section 3</button>
             <button onclick="document.getElementById('section4').scrollIntoView({behavior: 'smooth'})">Section 4</button>
@@ -138,9 +162,19 @@
         </div>
     </div>
     <div class="container">
-        <div id="section1" class="section left">
-            <img src="your-image.jpg" alt="Your Picture">
-            <div class="caption">Anastasiia Udovenko</div>
+        <div id="portfolio" class="section">
+            <div class="left">
+                <img src="your-image.jpg" alt="Your Picture">
+                <div class="caption">Anastasiia Udovenko</div>
+            </div>
+            <div class="right">
+                <div class="buttons">
+                    <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
+                    <button onclick="document.getElementById('section3').scrollIntoView({behavior: 'smooth'})">Section 3</button>
+                    <button onclick="document.getElementById('section4').scrollIntoView({behavior: 'smooth'})">Section 4</button>
+                    <button onclick="document.getElementById('section5').scrollIntoView({behavior: 'smooth'})">Section 5</button>
+                </div>
+            </div>
         </div>
         <div id="about" class="section about">
             <h1>About Me</h1>
