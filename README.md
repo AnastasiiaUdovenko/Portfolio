@@ -115,19 +115,19 @@
         <div class="logo">My Logo</div>
         <div class="nav-buttons">
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
-            <!-- Add more buttons for other sections if needed -->
+            <button>Section 1</button>
+            <button>Section 2</button>
+            <button>Section 3</button>
+            <button>Section 4</button>
         </div>
     </div>
-    <div class="full-screen-image">
-        <!-- You can add any additional content here if needed -->
-        <h1>Welcome to My Portfolio</h1>
-    </div>
+    <div class="full-screen-image"></div>
     <div id="about" class="about">
         <h1>About Me</h1>
         <div class="container">
             <div class="left">
                 <div class="image">
-                    <img src="./images/me.jph" alt="Headshot">
+                    <img src="./images/me.jpg" alt="me">
                 </div>
             </div>
             <div class="right">
