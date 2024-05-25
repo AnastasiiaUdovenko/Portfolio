@@ -112,7 +112,7 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="logo">My Logo</div>
+        <div class="logo" ('.images/Logo black .png')</div>
         <div class="nav-buttons">
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
             <button>Section 1</button>
