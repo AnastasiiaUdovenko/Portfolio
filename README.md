@@ -25,8 +25,9 @@
             left: 0;
             z-index: 1000;
         }
-        .navbar .logo {
-            font-size: 1.5em;
+        .navbar .logo img {
+            width: auto;
+            height: 40px; /* Adjust the height as needed */
         }
         .navbar .nav-buttons {
             display: flex;
@@ -112,9 +113,9 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="logo"> <!-- Opening tag for logo div -->
-            <img src="./images/logo.png" alt="Your Logo"> <!-- Image tag should be inside the logo div -->
-        </div> <!-- Closing tag for logo div -->
+        <div class="logo">
+            <img src="./images/logo.png" alt="Your Logo">
+        </div>
         <div class="nav-buttons">
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
             <button>Section 1</button>
