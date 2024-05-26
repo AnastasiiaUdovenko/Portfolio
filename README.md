@@ -25,15 +25,18 @@
             left: 0;
             z-index: 1000;
         }
+        .navbar .logo {
+            font-size: 1.5em;
+        }
         .navbar .logo img {
-            width: auto;
-            height: 40px; /* Adjust the height as needed */
+            width: 120px; /* Adjust the width as needed */
+            height: auto;
         }
         .navbar .nav-buttons {
             display: flex;
         }
         .navbar .nav-buttons button {
-            margin: 0 10px;
+            margin: 0 5px; /* Decreased margin between buttons */
             padding: 10px 20px;
             font-size: 1em;
             cursor: pointer;
@@ -114,7 +117,7 @@
 <body>
     <div class="navbar">
         <div class="logo">
-            <img src="./images/logo.jpg" alt="Your Logo">
+            <img src="./images/logo.png" alt="Your Logo">
         </div>
         <div class="nav-buttons">
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
