@@ -20,8 +20,8 @@
 </head>
 <body>
 <div class="gallery">
-    <img src="image1.jpg" alt="Image 1" onclick="openModal('image1.jpg')">
-    <img src="image2.jpg" alt="Image 2" onclick="openModal('image2.jpg')">
+    <img src="image1.jpg" alt="./images/me.jpg" onclick="openModal('image1.jpg')">
+    <img src="image2.jpg" alt="./images/hoop1.JPEG" onclick="openModal('image2.jpg')">
     <!-- Add more images as needed -->
 </div>
 
