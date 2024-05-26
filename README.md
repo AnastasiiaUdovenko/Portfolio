@@ -236,7 +236,7 @@
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
             <button onclick="document.getElementById('videos').scrollIntoView({behavior: 'smooth'})">Videos</button>
             <button onclick="document.getElementById('pictures').scrollIntoView({behavior: 'smooth'})">Pictures</button>
-            <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Education and Experience</button>
+            <button onclick="document.getElementById('education').scrollIntoView({behavior: 'smooth'})">Education and Experience</button>
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Contact Me</button>
         </div>
     </div>
