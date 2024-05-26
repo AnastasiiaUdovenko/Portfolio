@@ -198,7 +198,8 @@
   .pointer-right {
     right: 0;
   }
-          .education, .experience {
+          .education, 
+          .experience {
           margin-top: 40px;
             margin-bottom: 40px;
         }
