@@ -160,7 +160,7 @@
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 130px;
+    padding-top: 0px;
     left: 0;
     top: 0;
     width: 100%;
@@ -176,7 +176,7 @@
   .close {
     color: #fff;
     position: absolute;
-    top: 90px;
+    top: 10px;
     right: 25px;
     font-size: 30px;
     font-weight: bold;
