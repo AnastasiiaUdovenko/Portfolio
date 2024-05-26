@@ -174,7 +174,7 @@
         </div>
     </div>
     <div id="videos" class="videos">
-         <h1>Videos</h1>
+        <h1 style="text-align: center;">Videos</h1>
     <ul class="video-list">
         <li class="video-item">
             <a class="video-link" href="https://www.youtube.com/embed/pCsbirQaViY">
