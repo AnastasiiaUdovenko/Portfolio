@@ -202,7 +202,7 @@
             margin-bottom: 40px;
         }
                 .education .container,
-        .experience .container {
+                .experience .container {
             width: 80%; /* Adjust the width as needed */
             max-width: 1200px; /* Set maximum width */
             margin: auto; /* Center the container */
