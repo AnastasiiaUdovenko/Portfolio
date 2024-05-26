@@ -13,7 +13,7 @@
             scroll-behavior: smooth;
         }
         .navbar {
-            width: 100%;
+            width: 60px;
             background-color: #000000;
             color: #ffffff;
             display: flex;
@@ -23,10 +23,11 @@
             position: fixed;
             top: 0;
             left: 0;
+            right: 0;
             z-index: 1000;
         }
         .navbar .logo img {
-            width: 150px; /* Adjust the width of the logo image */
+            width: 200px; /* Adjust the width of the logo image */
             height: auto;
         }
         .navbar .nav-buttons {
@@ -109,6 +110,9 @@
             line-height: 1.6;
             margin-bottom: 20px;
         }
+        body {
+            margin-bottom: 70px;
+            }
     </style>
 </head>
 <body>
