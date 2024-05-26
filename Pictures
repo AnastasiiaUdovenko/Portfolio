@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+<style>
+    /* CSS for the gallery */
+    .gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+    .gallery img {
+        width: 100%;
+        scroll-snap-align: center;
+    }
+</style>
+</head>
+<body>
+<div class="gallery">
+    <img src="image1.jpg" alt="Image 1" onclick="openModal('image1.jpg')">
+    <img src="image2.jpg" alt="Image 2" onclick="openModal('image2.jpg')">
+    <!-- Add more images as needed -->
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+    // JavaScript for the modal
+    function openModal(imageSrc) {
+        document.getElementById('myModal').style.display = "block";
+        document.getElementById('modalImg').src = imageSrc;
+    }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+    }
+
+    // Close the modal when clicking outside of the image
+    window.onclick = function(event) {
+        var modal = document.getElementById('myModal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
