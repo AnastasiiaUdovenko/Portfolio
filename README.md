@@ -122,7 +122,7 @@
         </div>
         <div class="nav-buttons">
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
-            <button>Section 1</button>
+            <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Videos</button>
             <button>Section 2</button>
             <button>Section 3</button>
             <button>Section 4</button>
@@ -147,6 +147,70 @@
             </div>
         </div>
     </div>
+    <div class="full-screen-image"></div>
+    <div id="about" class="about">
+         <h1>Videos</h1>
+    <ul class="video-list">
+        <li class="video-item">
+            <a class="video-link" href="https://www.youtube.com/embed/pCsbirQaViY">
+                <h2>Promo</h2>
+                <iframe src="https://www.youtube.com/embed/pCsbirQaViY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <a class="video-link" href="https://www.youtube.com/embed/Js4RHO5j7SQ">
+                <h2>Hula hoop - Contortion act</h2>
+                <iframe src="https://www.youtube.com/embed/Js4RHO5j7SQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <a class="video-link" href="https://www.youtube.com/embed/2j2YWaLqeIo">
+                <h2>"Wizards in Winter" ~ Cirque Musica 2023</h2>
+                <iframe src="https://www.youtube.com/embed/2j2YWaLqeIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <a class="video-link" href="https://www.youtube.com/embed/D0NNIQ0eBkc">
+                <h2>Aerial moon ~ Celebrity Cruises 2021-2023</h2>
+                <iframe src="https://www.youtube.com/embed/D0NNIQ0eBkc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <a class="video-link" href="https://www.youtube.com/embed/db67Y0X9ZKk">
+                <h2>Contortion ~ Celebrity Cruises 2021-2023</h2>
+                <iframe src="https://www.youtube.com/embed/db67Y0X9ZKk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <a class="video-link" href="https://www.youtube.com/embed/iknI4urKxaY">
+                <h2>Aerial Lyra experience</h2>
+                <iframe src="https://www.youtube.com/embed/iknI4urKxaY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <a class="video-link" href="https://www.youtube.com/embed/P8M5aoNRzi0">
+                <h2>Silks experience</h2>
+                <iframe src="https://www.youtube.com/embed/P8M5aoNRzi0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <a class="video-link" href="https://www.youtube.com/embed/FvP84u08ppQ">
+                <iframe src="https://www.youtube.com/embed/FvP84u08ppQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <a class="video-link" href="https://www.youtube.com/embed/KBQjVvvkk0Q">
+                <h2>"Bad Girl" hula hoop ~ Celebrity Cruises 2021-2023</h2>
+                <iframe src="https://www.youtube.com/embed/KBQjVvvkk0Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <a class="video-link" href="https://www.youtube.com/embed/PM0cf7knRHY">
+                <h2>"Champagne Supernova" ~ Celebrity Cruises 2021-2023</h2>
+                <iframe src="https://www.youtube.com/embed/PM0cf7knRHY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+     </ul>   
     <!-- Add more sections for other content if needed -->
 </body>
 </html>
