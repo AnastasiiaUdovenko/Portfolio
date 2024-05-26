@@ -139,6 +139,65 @@
             width: 100%;
             height: 315px;
         }
+          .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+  }
+  .gallery img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  .close {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2; /* Ensure the close button is above other elements */
+  }
+  .pointer-left,
+  .pointer-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .pointer-left {
+    left: 0;
+  }
+  .pointer-right {
+    right: 0;
+  }
     </style>
 </head>
 <body>
@@ -149,7 +208,7 @@
         <div class="nav-buttons">
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
             <button onclick="document.getElementById('videos').scrollIntoView({behavior: 'smooth'})">Videos</button>
-            <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Pictures</button>
+            <button onclick="document.getElementById('pictures').scrollIntoView({behavior: 'smooth'})">Pictures</button>
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Education and Experience</button>
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Contact Me</button>
         </div>
@@ -236,6 +295,49 @@
             </a>
         </li>
      </ul>   
+        <div id="pictures" class="pictures">
+        <h1 style="text-align: center;">Pictures</h1>
+        <div class="gallery">
+  <img src="./images/hoop1.JPEG" alt="Image 1" onclick="openModal('./images/hoop.JPEG')">
+  <img src="./images/me.jpg.JPEG" alt="Image 2" onclick="openModal('./images/hoop1.JPEG')">
+  <img src="./images/nastiaHomepage.JPG" alt="Image 3" onclick="openModal('./images/hoop2.JPEG')">
+  <!-- Add more images here -->
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div class="pointer-left" onclick="previousImage()"></div>
+  <img class="modal-content" id="modalImg">
+  <div class="pointer-right" onclick="nextImage()"></div>
+</div>
+
+<script>
+  var images = ["./images/hoop1.JPEG", "./images/me.jog", "./images/nastiaHomepage.JPG"]; // List of image sources
+  var currentIndex = 0;
+
+  function openModal(imageSrc) {
+    var modal = document.getElementById('myModal');
+    var modalImg = document.getElementById('modalImg');
+    modal.style.display = "block";
+    modalImg.src = imageSrc;
+    currentIndex = images.indexOf(imageSrc);
+  }
+
+  function closeModal() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = "none";
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById('modalImg').src = images[currentIndex];
+  }
+
+  function previousImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById('modalImg').src = images[currentIndex];
+  }
+</script>
     <!-- Add more sections for other content if needed -->
 </body>
 </html>
