@@ -122,6 +122,7 @@
         }
         h2 {
             font-family: 'Prata', serif; /* Apply Prata font */
+        }
                 .video-list {
             list-style: none;
             padding: 0;
