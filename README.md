@@ -166,14 +166,15 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: center;
   }
   .modal-content {
     margin: auto;
     display: block;
     max-width: 90%;
     max-height: 90%;
+    position: relative;
+    top: 50%
+    transform: translateY(-50%);
   }
   .close {
     color: #fff;
