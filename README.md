@@ -198,6 +198,33 @@
   .pointer-right {
     right: 0;
   }
+          .education, .experience {
+            margin-bottom: 40px;
+        }
+        .experience-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+            
+        }
+        .experience-item:hover {
+            transform: translateY(-5px);
+        }
+        .experience-item img {
+            width: 120px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        /* Apply Prata font to education text */
+        .education p {
+            font-family: 'Prata', serif;
+        }
     </style>
 </head>
 <body>
@@ -338,6 +365,73 @@
     document.getElementById('modalImg').src = images[currentIndex];
   }
 </script>
+        <div id="education" class="education">
+        <h1 style="text-align: center;">Education and Experience</h1>
+        <div class="education">
+            <h2>Education</h2>
+            <p>
+                Anastasiia in 2021 completed the full course of the Kyiv Municipal Academy of Circus and Performing Arts. And received the diploma with honors in the field of Study Culture and Arts, Programme Subject Area Performing arts.
+            </p>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="experience">
+            <h2>Experience</h2>
+            <!-- Experience Item 1 -->
+            <div class="experience-item">
+                <img src="./images/hoop8.JPG" alt="Example Image">
+                <div class="info">
+                    <p><strong>Date:</strong> Nov 2023 - Jan 2024 </p>
+                    <p><strong>Company:</strong> Cirque Musica </p> 
+                    <p><strong>Description:</strong> The tour across the United States gave Anastasiia the chance to experience all the joys of bus touring, and it was pleasant for her to provide people with a Christmas mood. </p>
+                </div>
+            </div>
+            <!-- Experience Item 2 -->
+            <div class="experience-item">
+                <img src="./images/show16.jpeg" alt="Example Image">
+                <div class="info">
+                    <p><strong>Date:</strong> Jan 2024 - Mar 2024/Jan 2022 - Jul 2023 </p>
+                    <p><strong>Company:</strong> Celebrity Cruises Inc. </p>
+                    <p><strong>Description:</strong> Anastasiia had the privilege of doing several contracts with Celebrity Cruises, and was apart of
+                    their inaugural cast on the launch of their new ship Celebrity Beyond. She took part in
+                    the creation of their shows which gave her the opportunity to work along side well
+                    known producers such as Dondraico Johnson, Michelle Lynskey, Holly Palmer and
+                    Michael Fatice. She was given great exposure in this process to enhance the shows with
+                    multiple images, and work with multiple disciplines being hula-hoop, contortion, and
+                    aerial acts. </p>
+                </div>
+            </div>
+            <!-- Experience Item 3 -->
+            <div class="experience-item">
+                <img src="./images/hoop6.jpg" alt="Example Image">
+                <div class="info">
+                    <p><strong>Date:</strong> Dec 2021 - Jan 2022 </p>
+                    <p><strong>Company:</strong> Theatre "Rizoma" </p>
+                    <p><strong>Description:</strong> Anastasiia was working in Christmas show called "Alice in Wonderland “ under the production
+                    of very famous artist Anatoliy Zalevskiy who known as a double gold medalist of
+                    “Monte-Carlo circus festival” and “Cirque de Demain”. </p>
+                </div>
+            </div>
+            <!-- Experience Item 4 -->
+            <div class="experience-item">
+                <img src="./images/neon.jpg" alt="Example Image">
+                <div class="info">
+                    <p><strong>Date:</strong> Jul 2021 - Oct 2021/Apr 2019 - Oct 2019 </p>
+                    <p><strong>Company:</strong> Ezgi Event </p>
+                    <p><strong>Description:</strong> [....]</p>
+                </div>
+            </div>
+            <!-- Experience Item 5 -->
+            <div class="experience-item">
+                <img src="./images/kobzov.JPG" alt="Example Image">
+                <div class="info">
+                    <p><strong>Date:</strong> Mar 2017 - Sep 2018 </p>
+                    <p><strong>Company:</strong> Circus "Kobzov" </p> 
+                    <p><strong>Description:</strong> Anastasiia has done multiple contracts with the biggest travel circus in Ukraine as a Dance Capitan doing neon and fire performance. </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Add more sections for other content if needed -->
 </body>
 </html>
