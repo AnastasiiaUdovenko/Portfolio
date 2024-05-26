@@ -383,8 +383,9 @@
         </div>
 
         <!-- Experience Section -->
-        <div class="experience">
+        <div id="experience" class="experience">
             <h2>Experience</h2>
+            <div class="container">
             <!-- Experience Item 1 -->
             <div class="experience-item">
                 <img src="./images/hoop8.JPG" alt="Example Image">
