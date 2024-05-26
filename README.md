@@ -372,7 +372,7 @@
     document.getElementById('modalImg').src = images[currentIndex];
   }
 </script>
-        <div id="education" class="education">
+        <div id="experience" class="education">
         <h1 style="text-align: center;">Education and Experience</h1>
         <div class="container">
         
