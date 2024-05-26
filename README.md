@@ -147,8 +147,6 @@
             </div>
         </div>
     </div>
-    <div class="full-screen-image"></div>
-    <div id="about" class="about">
          <h1>Videos</h1>
     <ul class="video-list">
         <li class="video-item">
