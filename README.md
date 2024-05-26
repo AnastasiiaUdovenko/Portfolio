@@ -199,6 +199,7 @@
     right: 0;
   }
           .education, .experience {
+          margin-top: 40px;
             margin-bottom: 40px;
         }
                 .education .container,
