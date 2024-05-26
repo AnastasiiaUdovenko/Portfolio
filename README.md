@@ -201,6 +201,13 @@
           .education, .experience {
             margin-bottom: 40px;
         }
+                .education .container,
+        .experience .container {
+            width: 80%; /* Adjust the width as needed */
+            max-width: 1200px; /* Set maximum width */
+            margin: auto; /* Center the container */
+            padding: 0 40px; /* Add padding to create space from the edges */
+        }
         .experience-item {
             display: flex;
             align-items: center;
