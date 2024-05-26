@@ -123,9 +123,9 @@
         <div class="nav-buttons">
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Videos</button>
-            <button>Section 2</button>
-            <button>Section 3</button>
-            <button>Section 4</button>
+            <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Pictures</button>
+            <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Education and Experience</button>
+            <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Contact Me</button>
         </div>
     </div>
     <div class="full-screen-image"></div>
