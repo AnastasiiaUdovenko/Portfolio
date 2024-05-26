@@ -13,7 +13,7 @@
             scroll-behavior: smooth;
         }
         .navbar {
-            width: 80px;
+            width: 100%;
             background-color: #000000;
             color: #ffffff;
             display: flex;
@@ -23,15 +23,11 @@
             position: fixed;
             top: 0;
             left: 0;
-            right: 0;
             z-index: 1000;
         }
         .navbar .logo img {
-            width: 200px; /* Adjust the width of the logo image */
+            width: 150px; /* Adjust the width of the logo image */
             height: auto;
-        }    
-            body {
-            margin-bottom: 80px;
         }
         .navbar .nav-buttons {
             display: flex;
@@ -142,9 +138,6 @@
                     <div class="text-content">
                         <p>Hello! My name is Anastasiia Udovenko, and I was born on October 23, 2002, in the charming town of Novomoskovsk, Ukraine. My journey into the world of performance arts began early. At the age of six, I started school, where I quickly discovered a passion for choreography and drawing, attending additional classes to hone my skills.</p>
                         <p>A year later, my fascination with the circus led me to join the children's circus studio "Melange-art" in Novomoskovsk. This experience was transformative, and in 2016, as part of a talented group of neon jugglers, I had the thrilling opportunity to become a finalist on "Ukraine’s Got Talent. Kids."</p>
-                        <p>From 2017 to 2018, I expanded my horizons by working as a juggler and ballet dancer with the renowned Ukrainian circus "Kobzov." This period was incredibly enriching and solidified my love for the circus arts.</p>
-                        <p>In 2018, I took a significant step in my professional development by enrolling in the Kiev Municipal Academy of Circus and Performing Arts. I successfully graduated as a Junior Specialist and, in 2021, embarked on a Bachelor's degree. My studies have been comprehensive, covering juggling, contortion with hoops, acting, pantomime, and both classical and modern choreography.</p>
-                        <p>This is just the beginning of my adventure in the performing arts, and I am excited to see where this journey takes me next!</p>
                     </div>
                 </div>
             </div>
