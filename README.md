@@ -367,7 +367,8 @@
 </script>
         <div id="education" class="education">
         <h1 style="text-align: center;">Education and Experience</h1>
-        <div class="education">
+        <div class="container">
+        
             <h2>Education</h2>
             <p>
                 Anastasiia in 2021 completed the full course of the Kyiv Municipal Academy of Circus and Performing Arts. And received the diploma with honors in the field of Study Culture and Arts, Programme Subject Area Performing arts.
