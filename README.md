@@ -298,9 +298,9 @@
         <div id="pictures" class="pictures">
         <h1 style="text-align: center;">Pictures</h1>
         <div class="gallery">
-  <img src="./images/hoop1.JPEG" alt="Image 1" onclick="openModal('./images/hoop.JPEG')">
-  <img src="./images/me.jpg.JPEG" alt="Image 2" onclick="openModal('./images/hoop1.JPEG')">
-  <img src="./images/nastiaHomepage.JPG" alt="Image 3" onclick="openModal('./images/hoop2.JPEG')">
+  <img src="./images/hoop1.JPEG" alt="Image 1" onclick="openModal('./images/hoop1.JPEG')">
+  <img src="./images/me.jpg" alt="Image 2" onclick="openModal('./images/me.jpg')">
+  <img src="./images/nastiaHomepage.JPG" alt="Image 3" onclick="openModal('./images/nastiaHomepage.JPG')">
   <!-- Add more images here -->
 </div>
 
@@ -312,7 +312,7 @@
 </div>
 
 <script>
-  var images = ["./images/hoop1.JPEG", "./images/me.jog", "./images/nastiaHomepage.JPG"]; // List of image sources
+  var images = ["./images/hoop1.JPEG", "./images/me.jpg", "./images/nastiaHomepage.JPG"]; // List of image sources
   var currentIndex = 0;
 
   function openModal(imageSrc) {
