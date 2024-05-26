@@ -27,7 +27,7 @@
             z-index: 1000;
         }
         .navbar .logo img {
-            width: 200px; /* Adjust the width of the logo image */
+            width: 80px; /* Adjust the width of the logo image */
             height: auto;
         }
         body {
@@ -118,7 +118,7 @@
 <body>
     <div class="navbar">
         <div class="logo">
-            <img src="./images/logo.png" alt="Your Logo">
+            <img src="./images/logo.jpg" alt="Your Logo">
         </div>
         <div class="nav-buttons">
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
