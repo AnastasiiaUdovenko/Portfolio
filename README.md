@@ -13,7 +13,7 @@
             scroll-behavior: smooth;
         }
         .navbar {
-            width: 60px;
+            width: 80px;
             background-color: #000000;
             color: #ffffff;
             display: flex;
@@ -29,6 +29,9 @@
         .navbar .logo img {
             width: 200px; /* Adjust the width of the logo image */
             height: auto;
+        }    
+            body {
+            margin-bottom: 80px;
         }
         .navbar .nav-buttons {
             display: flex;
@@ -110,9 +113,6 @@
             line-height: 1.6;
             margin-bottom: 20px;
         }
-        body {
-            margin-bottom: 70px;
-            }
     </style>
 </head>
 <body>
