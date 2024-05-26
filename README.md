@@ -25,19 +25,16 @@
             left: 0;
             z-index: 1000;
         }
-        .navbar .logo {
-            font-size: 1.5em;
-        }
         .navbar .logo img {
-            width: 120px; /* Adjust the width as needed */
+            width: 150px; /* Adjust the width of the logo image */
             height: auto;
         }
         .navbar .nav-buttons {
             display: flex;
         }
         .navbar .nav-buttons button {
-            margin: 0 5px; /* Decreased margin between buttons */
-            padding: 10px 20px;
+            margin: 0 5px;
+            padding: 8px 16px; /* Decreased padding around buttons */
             font-size: 1em;
             cursor: pointer;
             font-family: 'Prata', serif;
