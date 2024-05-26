@@ -113,6 +113,31 @@
             line-height: 1.6;
             margin-bottom: 20px;
         }
+                h1 {
+            font-family: 'Prata', serif; /* Apply Prata font */
+            font-size: 54px; /* 50% larger font size */
+            padding: 20px;
+            margin: 0;
+            
+        }
+        h2 {
+            font-family: 'Prata', serif; /* Apply Prata font */
+                .video-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            max-width: 1000px; /* Increased max-width to accommodate two columns */
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px; /* Add gap between grid items */
+         }
+        .video-item {
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+        }
     </style>
 </head>
 <body>
@@ -122,7 +147,7 @@
         </div>
         <div class="nav-buttons">
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About Me</button>
-            <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Videos</button>
+            <button onclick="document.getElementById('videos').scrollIntoView({behavior: 'smooth'})">Videos</button>
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Pictures</button>
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Education and Experience</button>
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Contact Me</button>
@@ -147,6 +172,7 @@
             </div>
         </div>
     </div>
+    <div id="videos" class="videos">
          <h1>Videos</h1>
     <ul class="video-list">
         <li class="video-item">
