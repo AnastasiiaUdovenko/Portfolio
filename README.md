@@ -159,7 +159,7 @@
   .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 2000;
     padding-top: 0px;
     left: 0;
     top: 0;
@@ -181,7 +181,7 @@
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 2; /* Ensure the close button is above other elements */
+    z-index: 2001; /* Ensure the close button is above other elements */
   }
   .pointer-left,
   .pointer-right {
