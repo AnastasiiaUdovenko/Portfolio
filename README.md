@@ -11,7 +11,23 @@
             padding: 0;
             font-family: 'Prata', serif;
             scroll-behavior: smooth;
+            position: relative;
+            geight: 100%;
         }
+        body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./images/logo.png'); /* Add your new background image */
+    background-size: cover; /* Ensure the background covers the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    opacity: 0.1; /* Adjust the opacity to make the background image almost invisible */
+    z-index: -1; /* Place the background image behind all other content */
+}
         .navbar {
             height: 80px;
             background-color: #000000;
@@ -63,36 +79,19 @@
             text-align: center;
             color: #ffffff;
         }
+
         .about {
-    position: relative; /* Ensure the container is positioned correctly */
-    color: #000000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 100px; /* Add padding to compensate for fixed navbar */
-}
-
-.about::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('./images/logo.png'); /* Add your new background image */
-    background-size: cover; /* Ensure the background covers the entire section */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background from repeating */
-    opacity: 0.1; /* Adjust the opacity to make the background image almost invisible */
-    z-index: -1; /* Place the background image behind the text and current image */
-}
-
-.about .container {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    position: relative; /* Ensure the container is positioned correctly */
-    z-index: 1; /* Make sure the content is above the background */
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+        }
+        .about .container {
+            display: flex;
+            flex-direction: row;
+            width: 80%;
         }
         .about .left {
             flex: 1;
