@@ -242,7 +242,7 @@
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9); /* Light background color with transparency */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Box shadow */
-    margin: 50px; auto;
+    margin: 0 auto;
 }
 
 .contact-box h3 {
@@ -270,6 +270,7 @@
             flex-direction: column;
             align-items: center;
             padding-top: 100px 20px; /* Add padding to compensate for fixed navbar */
+            height: 100vh;
 }
     </style>
 </head>
