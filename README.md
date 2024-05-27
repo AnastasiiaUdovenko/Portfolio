@@ -488,7 +488,7 @@
             </div>
         </div>
     </div>
-    <div id="contactme" class="contactme" style="background-image: url('./images/logo.jpg');>
+<div id="contactme" class="contactme" style="background-image: url('./images/logo.jpg');">
     <div class="contact-box">
     <h3>Contact me</h3>
     <p>Email: yourgmail@gmail.com</p>
