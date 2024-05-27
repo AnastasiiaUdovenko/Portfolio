@@ -6,50 +6,26 @@
     <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
     <style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Prata', serif;
-    scroll-behavior: smooth;
-    height: 100%;
-    background-image: url('./images/logo.png'); /* New background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Fix background image */
-    opacity: 0.1; /* Adjust opacity as needed */
-    z-index: 0; /* Set z-index to place it behind everything */
-}
-
-.navbar {
-    height: 80px;
-    background-color: #000000;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; /* Set z-index higher than body to place it above */
-}
-
-.full-screen-image {
-    background-image: url('./images/nastiaHomepage.JPG');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-    position: relative;
-    z-index: -1; /* Set z-index to place it behind everything */
-}
-        
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Prata', serif;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            height: 80px;
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
         .navbar .logo img {
             width: 80px; /* Adjust the width of the logo image */
             height: auto;
@@ -87,14 +63,13 @@ body, html {
             text-align: center;
             color: #ffffff;
         }
-
         .about {
             background-color: #ffffff;
             color: #000000;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 100px;
+            padding-top: 100px; /* Add padding to compensate for fixed navbar */
         }
         .about .container {
             display: flex;
