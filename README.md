@@ -11,23 +11,14 @@
             padding: 0;
             font-family: 'Prata', serif;
             scroll-behavior: smooth;
-            position: relative;
-            geight: 100%;
+            height: 100%;
+            background-image: url('./images/logo.png'); /* New background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Fix background image */
+            opacity: 0.1; /* Adjust opacity as needed */
         }
-        body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('./images/logo.png'); /* Add your new background image */
-    background-size: cover; /* Ensure the background covers the entire page */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background from repeating */
-    opacity: 0.1; /* Adjust the opacity to make the background image almost invisible */
-    z-index: -1; /* Place the background image behind all other content */
-}
         .navbar {
             height: 80px;
             background-color: #000000;
