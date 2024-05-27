@@ -64,17 +64,25 @@
             color: #ffffff;
         }
         .about {
-            background-color: #ffffff;
-            color: #000000;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 100px; /* Add padding to compensate for fixed navbar */
-        }
-        .about .container {
-            display: flex;
-            flex-direction: row;
-            width: 80%;
+                background-image: url('./images/logo.jpg'); /* Add your new background image */
+    background-size: cover; /* Ensure the background covers the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px; /* Add padding to compensate for fixed navbar */
+    position: relative; /* Make sure the background image doesn't affect other elements */
+    z-index: 1; /* Ensure the text and current image are on top */
+}
+
+.about .container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    position: relative; /* Ensure the container is positioned correctly */
+    z-index: 2; /* Make sure the content is above the background */
         }
         .about .left {
             flex: 1;
