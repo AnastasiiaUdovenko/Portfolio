@@ -234,6 +234,17 @@
         .education p {
             font-family: 'Prata', serif;
         }
+            .contact-box {
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 300px;
+        margin: 0 auto; /* Center the box horizontally */
+        text-align: center; /* Center text within the box */
+    }
+
+    .contact-box h3 {
+        margin-top: 0; /* Remove default margin */
+    }
     </style>
 </head>
 <body>
@@ -246,7 +257,7 @@
             <button onclick="document.getElementById('videos').scrollIntoView({behavior: 'smooth'})">Videos</button>
             <button onclick="document.getElementById('pictures').scrollIntoView({behavior: 'smooth'})">Pictures</button>
             <button onclick="document.getElementById('education').scrollIntoView({behavior: 'smooth'})">Education and Experience</button>
-            <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Contact Me</button>
+            <button onclick="document.getElementById('contactme').scrollIntoView({behavior: 'smooth'})">Contact Me</button>
         </div>
     </div>
     <div class="full-screen-image"></div>
@@ -443,6 +454,11 @@
             </div>
         </div>
     </div>
+    <div id="contactme" class="contactme">
+    <div class="contact-box">
+    <h3>Contact me</h3>
+    <p>Email: yourgmail@gmail.com</p>
+</div>
     <!-- Add more sections for other content if needed -->
 </body>
 </html>
