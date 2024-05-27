@@ -266,18 +266,13 @@
     text-decoration: underline; /* Add underline on hover */
 }
     }
-.contactme {
-    background-image: url('./images/logo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.7; /* Adjust the opacity value as needed (0.0 to 1.0) */
-    position: relative;
-    z-index: 1; /* Corrected 'z-index' property */
+        .contactme {
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px; /* Add padding to compensate for fixed navbar */
 }
     </style>
 </head>
