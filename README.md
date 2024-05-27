@@ -245,6 +245,17 @@
     .contact-box h3 {
         margin-top: 0; /* Remove default margin */
     }
+    .contactme {
+    background-image: url('./images/logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7; /* Adjust the opacity value as needed (0.0 to 1.0) */
+}
     </style>
 </head>
 <body>
@@ -454,7 +465,7 @@
             </div>
         </div>
     </div>
-    <div id="contactme" class="contactme">
+    <div id="contactme" class="contactme"> style="background-image: url('./images/logo.npg');">
     <div class="contact-box">
     <h3>Contact me</h3>
     <p>Email: yourgmail@gmail.com</p>
