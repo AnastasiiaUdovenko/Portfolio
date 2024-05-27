@@ -493,6 +493,7 @@
     <h3>Contact me</h3>
     <p>Email: yourgmail@gmail.com</p>
 </div>
+</div>
     <!-- Add more sections for other content if needed -->
 </body>
 </html>
