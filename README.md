@@ -242,6 +242,10 @@
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9); /* Light background color with transparency */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Box shadow */
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .contact-box h3 {
@@ -482,7 +486,7 @@
             </div>
         </div>
     </div>
-    <div id="contactme" class="contactme"> style="background-image: url('./images/logo.npg');">
+    <div id="contactme" class="contactme"> style="background-image: url('./images/logo.png');">
     <div class="contact-box">
     <h3>Contact me</h3>
     <p>Email: yourgmail@gmail.com</p>
