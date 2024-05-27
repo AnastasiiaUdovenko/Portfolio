@@ -266,8 +266,8 @@
     text-decoration: underline; /* Add underline on hover */
 }
     }
-    .contactme {
-    background-image a: url('./images/logo.jpg');
+.contactme {
+    background-image: url('./images/logo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -277,7 +277,7 @@
     align-items: center;
     opacity: 0.7; /* Adjust the opacity value as needed (0.0 to 1.0) */
     position: relative;
-    z-inder: 1;
+    z-index: 1; /* Corrected 'z-index' property */
 }
     </style>
 </head>
@@ -488,7 +488,7 @@
             </div>
         </div>
     </div>
-<div id="contactme" class="contactme" style="background-image a: url('./images/logo.jpg');">
+<div id="contactme" class="contactme" style="background-image: url('./images/logo.jpg');">
     <div class="contact-box">
     <h3>Contact me</h3>
     <p>Email: yourgmail@gmail.com</p>
