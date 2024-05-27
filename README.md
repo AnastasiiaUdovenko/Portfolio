@@ -27,18 +27,15 @@
             z-index: 1000;
         }
         .navbar .logo img {
-            width: 80px; /* Adjust the width of the logo image */
+            width: 80px;
             height: auto;
-        }
-        body {
-            margin-top: 80px;
         }
         .navbar .nav-buttons {
             display: flex;
         }
         .navbar .nav-buttons button {
             margin: 0 5px;
-            padding: 8px 16px; /* Decreased padding around buttons */
+            padding: 8px 16px;
             font-size: 1em;
             cursor: pointer;
             font-family: 'Prata', serif;
@@ -51,6 +48,9 @@
         .navbar .nav-buttons button:hover {
             background-color: #cccccc;
             color: #000000;
+        }
+        body {
+            margin-top: 80px;
         }
         .full-screen-image {
             background-image: url('./images/nastiaHomepage.JPG');
@@ -69,7 +69,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 100px; /* Add padding to compensate for fixed navbar */
+            padding-top: 100px;
         }
         .about .container {
             display: flex;
@@ -113,25 +113,24 @@
             line-height: 1.6;
             margin-bottom: 20px;
         }
-                h1 {
-            font-family: 'Prata', serif; /* Apply Prata font */
-            font-size: 54px; /* 50% larger font size */
+        h1 {
+            font-family: 'Prata', serif;
+            font-size: 54px;
             padding: 20px;
             margin: 0;
-            
         }
         h2 {
-            font-family: 'Prata', serif; /* Apply Prata font */
+            font-family: 'Prata', serif;
         }
-                .video-list {
+        .video-list {
             list-style: none;
             padding: 0;
             margin: 20px auto;
-            max-width: 1000px; /* Increased max-width to accommodate two columns */
-            display: grid; /* Use grid layout */
+            max-width: 1000px;
+            display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px; /* Add gap between grid items */
-         }
+            grid-gap: 20px;
+        }
         .video-item {
             margin-bottom: 20px;
         }
@@ -139,76 +138,76 @@
             width: 100%;
             height: 315px;
         }
-          .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    justify-content: center;
-    padding: 20px;
-  }
-  .gallery img {
-    max-width: 100%;
-    max-height: 100%;
-    margin: 10px;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  .gallery img:hover {
-    transform: scale(1.1);
-  }
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    padding-top: 0px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-  }
-  .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 90%;
-  }
-  .close {
-    color: #fff;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2001; /* Ensure the close button is above other elements */
-  }
-  .pointer-left,
-  .pointer-right {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 20%;
-    cursor: pointer;
-    z-index: 1;
-  }
-  .pointer-left {
-    left: 0;
-  }
-  .pointer-right {
-    right: 0;
-  }
-          .education, 
-          .experience {
-          margin-top: 40px;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .gallery img {
+            max-width: 100%;
+            max-height: 100%;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 0px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .close {
+            color: #fff;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 2001;
+        }
+        .pointer-left,
+        .pointer-right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 20%;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .pointer-left {
+            left: 0;
+        }
+        .pointer-right {
+            right: 0;
+        }
+        .education, 
+        .experience {
+            margin-top: 40px;
             margin-bottom: 40px;
         }
-                .education .container,
-                .experience .container {
-            width: 80%; /* Adjust the width as needed */
-            max-width: 1200px; /* Set maximum width */
-            margin: auto; /* Center the container */
-            padding: 0 40px; /* Add padding to create space from the edges */
+        .education .container,
+        .experience .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 40px;
         }
         .experience-item {
             display: flex;
@@ -219,7 +218,6 @@
             padding: 20px;
             border-radius: 5px;
             transition: transform 0.3s ease;
-            
         }
         .experience-item:hover {
             transform: translateY(-5px);
@@ -230,64 +228,58 @@
             border-radius: 5px;
             margin-right: 20px;
         }
-        /* Apply Prata font to education text */
         .education p {
             font-family: 'Prata', serif;
         }
-.contact-box {
-    position: relative;
-    z-index: 2; /* Ensure the contact box is above the overlay */
-    border: 2px solid #333;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-}
-
-.contact-box h3 {
-    margin-top: 0;
-    color: #333; /* Dark gray color for the heading */
-}
-
-.contact-box p {
-    color: #555; /* Slightly lighter gray color for the text */
-}
-
-.contact-box a {
-    color: #4CAF50; /* Green color for links */
-    text-decoration: none; /* Remove underlines from links */
-}
-
-.contact-box a:hover {
-    text-decoration: underline; /* Add underline on hover */
-}
-    }
-        .contactme {    background-image: url('./images/logo.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #000000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 20px;
-    height: 100vh;
-    position: relative;
-}
-
-.contactme::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency */
-    z-index: 1;
-}
+        .contact-box {
+            position: relative;
+            z-index: 2;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
+        .contact-box h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .contact-box p {
+            color: #555;
+        }
+        .contact-box a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        .contactme {
+            background-image: url('./images/logo.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 20px;
+            height: 100vh;
+            position: relative;
+        }
+        .contactme::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
