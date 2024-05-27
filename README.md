@@ -64,7 +64,7 @@
             color: #ffffff;
         }
         .about {
-                background-image: url('./images/logo.jpg'); /* Add your new background image */
+                background-image: url('./images/logo.png'); /* Add your new background image */
     background-size: cover; /* Ensure the background covers the entire section */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background from repeating */
