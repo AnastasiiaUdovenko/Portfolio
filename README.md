@@ -235,13 +235,15 @@
             font-family: 'Prata', serif;
         }
 .contact-box {
-    border: 2px solid #333; /* Dark gray border */
-    border-radius: 10px; /* Rounded corners */
+    position: relative;
+    z-index: 2; /* Ensure the contact box is above the overlay */
+    border: 2px solid #333;
+    border-radius: 10px;
     padding: 20px;
     width: 300px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); /* Light background color with transparency */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Box shadow */
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 0 auto;
 }
 
@@ -263,14 +265,28 @@
     text-decoration: underline; /* Add underline on hover */
 }
     }
-        .contactme {
-            background-color: #ffffff;
-            color: #000000;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 100px 20px; /* Add padding to compensate for fixed navbar */
-            height: 100vh;
+        .contactme {    background-image: url('./images/logo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    height: 100vh;
+    position: relative;
+}
+
+.contactme::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency */
+    z-index: 1;
 }
     </style>
 </head>
