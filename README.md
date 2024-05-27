@@ -234,16 +234,33 @@
         .education p {
             font-family: 'Prata', serif;
         }
-            .contact-box {
-        border: 1px solid #ccc;
-        padding: 20px;
-        width: 300px;
-        margin: 0 auto; /* Center the box horizontally */
-        text-align: center; /* Center text within the box */
-    }
+.contact-box {
+    border: 2px solid #333; /* Dark gray border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background color with transparency */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Box shadow */
+}
 
-    .contact-box h3 {
-        margin-top: 0; /* Remove default margin */
+.contact-box h3 {
+    margin-top: 0;
+    color: #333; /* Dark gray color for the heading */
+}
+
+.contact-box p {
+    color: #555; /* Slightly lighter gray color for the text */
+}
+
+.contact-box a {
+    color: #4CAF50; /* Green color for links */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+.contact-box a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
     }
     .contactme {
     background-image: url('./images/logo.png');
