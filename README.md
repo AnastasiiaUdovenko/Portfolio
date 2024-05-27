@@ -64,17 +64,27 @@
             color: #ffffff;
         }
         .about {
-                background-image: url('./images/logo.png'); /* Add your new background image */
-    background-size: cover; /* Ensure the background covers the entire section */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background from repeating */
+    position: relative; /* Ensure the container is positioned correctly */
     color: #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 100px; /* Add padding to compensate for fixed navbar */
-    position: relative; /* Make sure the background image doesn't affect other elements */
-    z-index: 1; /* Ensure the text and current image are on top */
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./images/logo.png'); /* Add your new background image */
+    background-size: cover; /* Ensure the background covers the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    opacity: 0.1; /* Adjust the opacity to make the background image almost invisible */
+    z-index: -1; /* Place the background image behind the text and current image */
 }
 
 .about .container {
@@ -82,7 +92,7 @@
     flex-direction: row;
     width: 80%;
     position: relative; /* Ensure the container is positioned correctly */
-    z-index: 2; /* Make sure the content is above the background */
+    z-index: 1; /* Make sure the content is above the background */
         }
         .about .left {
             flex: 1;
