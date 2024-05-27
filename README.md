@@ -276,6 +276,8 @@
     justify-content: center;
     align-items: center;
     opacity: 0.7; /* Adjust the opacity value as needed (0.0 to 1.0) */
+    position: relative;
+    z-inder: 1;
 }
     </style>
 </head>
@@ -486,7 +488,7 @@
             </div>
         </div>
     </div>
-    <div id="contactme" class="contactme">
+    <div id="contactme" class="contactme" style="background-image: url('./images/logo.jpg');>
     <div class="contact-box">
     <h3>Contact me</h3>
     <p>Email: yourgmail@gmail.com</p>
