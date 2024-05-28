@@ -6,6 +6,7 @@
     <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
     <style>
         body, html {
             margin: 0;
