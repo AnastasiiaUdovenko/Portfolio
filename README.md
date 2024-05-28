@@ -519,7 +519,7 @@
     <div class="contact-box">
     <h3>Contact me</h3>
     <p>Email: nastia.ydovenko@gmail.com</p>
-    <p>Instagram: <a href="https://www.instagram.com/anastasia__udovenko?igsh=NTF1MGMwcm51c2w2" target="_blank">anastasia__udovenko<a></p>
+    <p>Instagram: <a style="color: black; text-decoration: underline;" href="https://www.instagram.com/anastasia__udovenko?igsh=NTF1MGMwcm51c2w2" target="_blank">anastasia__udovenko<a></p>
 </div>
 </div>
     <!-- Add more sections for other content if needed -->
