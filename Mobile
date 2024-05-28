@@ -327,7 +327,8 @@ color: #007BFF;
             <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
         </div>
     </div>
-    <script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
         function openModal(img) {
             const modal = document.getElementById("modal");
             const modalImg = document.getElementById("modal-img");
@@ -336,31 +337,30 @@ color: #007BFF;
             currentImageIndex = Array.from(galleryImages).indexOf(img);
         }
 
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
 
-    function closeModal() {
-        const modal = document.getElementById("modal");
-        modal.style.display = "none";
-    }
+        let currentImageIndex = 0;
+        const galleryImages = document.querySelectorAll('.gallery img');
 
-    let currentImageIndex = 0;
-    const galleryImages = document.querySelectorAll('.gallery img');
+        function showImage(index) {
+            currentImageIndex = index;
+            const modalImg = document.getElementById("modal-img");
+            modalImg.src = galleryImages[index].src;
+        }
 
-    function showImage(index) {
-        currentImageIndex = index;
-        const modalImg = document.getElementById("modal-img");
-        modalImg.src = galleryImages[index].src;
-    }
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            showImage(currentImageIndex);
+        }
 
-    function prevImage() {
-        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-        showImage(currentImageIndex);
-    }
-
-    function nextImage() {
-        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-        showImage(currentImageIndex);
-    }
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            showImage(currentImageIndex);
+        }
+    });
 </script>
-
 </body>
 </html>
