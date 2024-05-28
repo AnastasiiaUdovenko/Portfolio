@@ -518,7 +518,8 @@
 <div id="contactme" class="contactme">
     <div class="contact-box">
     <h3>Contact me</h3>
-    <p>Email: yourgmail@gmail.com</p>
+    <p>Email: nastia.ydovenko@gmail.com</p>
+    <p>Instagram: anastasia__udovenko</p>
 </div>
 </div>
     <!-- Add more sections for other content if needed -->
