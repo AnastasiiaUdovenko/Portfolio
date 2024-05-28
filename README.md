@@ -157,6 +157,7 @@
         }
         .modal {
             display: none;
+            justify-content: center;
             position: fixed;
             z-index: 2000;
             padding-top: 0px;
@@ -400,7 +401,7 @@
   function openModal(imageSrc) {
     var modal = document.getElementById('myModal');
     var modalImg = document.getElementById('modalImg');
-    modal.style.display = "block";
+    modal.style.display = "flex";
     modalImg.src = imageSrc;
     currentIndex = images.indexOf(imageSrc);
   }
@@ -432,8 +433,8 @@
 
         <!-- Experience Section -->
         <div id="experience" class="experience">
-            <h2>Experience</h2>
             <div class="container">
+            <h2>Experience</h2>
             <!-- Experience Item 1 -->
             <div class="experience-item">
                 <img src="./images/hoop8.JPG" alt="Example Image">
