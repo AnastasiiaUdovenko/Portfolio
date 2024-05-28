@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body, html {
             margin: 0;
@@ -122,7 +123,12 @@
         h2 {
             font-family: 'Prata', serif;
         }
+        .videos {
+            padding-top: 100px;
+        }
         .video-list {
+            align-items: end;
+            grid-auto-rows: 1fr;
             list-style: none;
             padding: 0;
             margin: 20px auto;
@@ -137,6 +143,9 @@
         iframe {
             width: 100%;
             height: 315px;
+        }
+        .pictures {
+            padding-top: 100px;
         }
         .gallery {
             display: grid;
@@ -186,17 +195,29 @@
         .pointer-left,
         .pointer-right {
             position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 20%;
+            top: 50%;
+            width: auto;
+            padding: 16px;
             cursor: pointer;
-            z-index: 1;
+            z-index: 2001;
+            color: white;
+            font-size: 30px;
+            user-select: none;
+            transition: background-color 0.3s;
         }
         .pointer-left {
-            left: 0;
+            left: 10px;
         }
         .pointer-right {
-            right: 0;
+            right: 10px;
+        }
+        .pointer-left:hover,
+        .pointer-right:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 50%;
+        }
+        .education {
+            padding-top: 100px;
         }
         .education, 
         .experience {
@@ -338,7 +359,7 @@
         </li>
         <li class="video-item">
             <a class="video-link" href="https://www.youtube.com/embed/D0NNIQ0eBkc">
-                <h2>Aerial moon ~ Celebrity Cruises 2021-2023</h2>
+                <h2>Aerial moon ~ Celebrity Cruises 2021-23</h2>
                 <iframe src="https://www.youtube.com/embed/D0NNIQ0eBkc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </a>
         </li>
@@ -389,9 +410,13 @@
 
 <div id="myModal" class="modal">
   <span class="close" onclick="closeModal()">&times;</span>
-  <div class="pointer-left" onclick="previousImage()"></div>
+  <div class="pointer-left" onclick="previousImage()">
+      <i class="fas fa-chevron-left"></i>
+  </div>
   <img class="modal-content" id="modalImg">
-  <div class="pointer-right" onclick="nextImage()"></div>
+  <div class="pointer-right" onclick="nextImage()">
+      <i class="fas fa-chevron-right"></i>
+  </div>
 </div>
 
 <script>
@@ -434,7 +459,7 @@
         <!-- Experience Section -->
         <div id="experience" class="experience">
             <div class="container">
-            <h2>Experience</h2>
+                <h2>Experience</h2>
             <!-- Experience Item 1 -->
             <div class="experience-item">
                 <img src="./images/hoop8.JPG" alt="Example Image">
