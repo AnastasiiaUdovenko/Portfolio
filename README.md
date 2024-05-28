@@ -280,7 +280,7 @@
             text-decoration: underline;
         }
         .contactme {
-            background-image: url('./images/logo.jpg');
+            background-image: url('./images/logoend.JPEG');
             background-size: cover;
             background-position: center;
             color: #000000;
