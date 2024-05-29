@@ -254,9 +254,13 @@
         .education p {
             font-family: 'Prata', serif;
         }
-        .contact-box {
+        #contac-wrapper {
+        padding: 100px 20px;
+        background: url('./images/logoend.jpg') no-repeat center center/cover;
         position: relative;
         z-index: 2;
+    }
+        .contact-box {
         border: 2px solid #333;
         border-radius: 10px;
         padding: 20px;
@@ -264,7 +268,7 @@
         text-align: center;
         background-color: rgba(255, 255, 255, 0.9);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        margin: 20px auto;
+        margin: 0 auto;
     }
     .contact-box h3 {
         margin-top: 0;
@@ -307,10 +311,6 @@
     }
     .contact-box i {
         margin-right: 5px;
-    }
-    #contactme {
-        padding: 100px 20px;
-        background: url('./images/logoend.jpg') no-repeat center center/cover;
     }
     </style>
 </head>
@@ -525,6 +525,7 @@
             </div>
         </div>
     </div>
+    <div id="contact-wrapper">
     <div id="contactme" class="contact-box">
         <h3>Contact me</h3>
         <p>Email: <a href="mailto:nastia.ydovenko@gmail.com"><i class="fas fa-envelope"></i> nastia.ydovenko@gmail.com</a></p>
@@ -536,7 +537,8 @@
             <button type="submit">Send Message</button>
         </form>
     </div>
-</div>           
+</div>  
+        </div>
     <!-- Add more sections for other content if needed -->
 </body>
 </html>
