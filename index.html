@@ -413,13 +413,13 @@
         <h1 style="text-align: center;">Pictures</h1>
         <div class="gallery">
         <img src="./images/hoop.JPEG" alt="Image 1" onclick="openModal('./images/hoop.JPEG')">
-        <img src="./images/hoop1.JPEG" alt="Image 2" onclick="openModal('.images/hoop1.JPEG')">
-        <img src="./images/hoop2.JPEG" alt="Image 3" onclick="openModal('.images/hoop2.JPEG')">
-        <img src="./images/hoop3.JPEG" alt="Image 4" onclick="openModal('.images/hoop3.JPEG')">
-        <img src="./images/hoop4.jpg" alt="Image 5" onclick="openModal('.images/hoop4.jpg')">
-        <img src="./images/hoop5.jpg" alt="Image 6" onclick="openModal('.images/hoop5.jpg')">
-        <img src="./images/hoop6.jpg" alt="Image 7" onclick="openModal('.images/hoop6.jpg')">
-        <img src="./images/hoop7.JPEG" alt="Image 8" onclick="openModal('.images/hoop7.JPEG')">
+        <img src="./images/hoop1.JPEG" alt="Image 2" onclick="openModal('./images/hoop1.JPEG')">
+        <img src="./images/hoop2.JPEG" alt="Image 3" onclick="openModal('./images/hoop2.JPEG')">
+        <img src="./images/hoop3.JPEG" alt="Image 4" onclick="openModal('./images/hoop3.JPEG')">
+        <img src="./images/hoop4.jpg" alt="Image 5" onclick="openModal('./images/hoop4.jpg')">
+        <img src="./images/hoop5.jpg" alt="Image 6" onclick="openModal('./images/hoop5.jpg')">
+        <img src="./images/hoop6.jpg" alt="Image 7" onclick="openModal('./images/hoop6.jpg')">
+        <img src="./images/hoop7.JPEG" alt="Image 8" onclick="openModal('./images/hoop7.JPEG')">
         <img src="./images/hoop8.JPG" alt="Image 9" onclick="openModal('./images/hoop8.JPG')">
         <img src="./images/hoop9.JPG" alt="Image 10" onclick="openModal('./images/hoop9.JPG')">
         <img src="./images/hoop10.JPG" alt="Image 11" onclick="openModal('./images/hoop10.JPG')">
@@ -489,11 +489,13 @@
             modal.style.display = "flex";
             modalImg.src = imageSrc;
             currentIndex = images.indexOf(imageSrc);
+            document.addEventListener('keydown', handleKeydown);
         }
 
         function closeModal() {
             var modal = document.getElementById('myModal');
             modal.style.display = "none";
+            document.removeEventListener('keydown', handleKeydown);
         }
 
         function nextImage() {
@@ -505,6 +507,13 @@
             currentIndex = (currentIndex - 1 + images.length) % images.length;
             document.getElementById('modalImg').src = images[currentIndex];
         }
+        function handleKeydown(event) {
+            if (event.key === "ArrowRight") {
+              nextImage();
+            } else if (event.key === "ArrowLeft") {
+              previousImage();
+            }
+          }
 </script>
         <div id="education" class="education">
         <h1 style="text-align: center;">Education and Experience</h1>
