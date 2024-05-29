@@ -463,31 +463,40 @@
 </div>
 
 <script>
-  var images = ["./images/hoop.JPEG", "./images/hoop1.JPEG", "./images/hoop2.JPEG", "./images/hoop3.JPEG", "./images/hoop4.jpg", "./images/hoop5.jpg", "./images/hoop6.jpg", "./images/hoop7.JPEG", "./images/hoop8.JPG", "./images/hoop9.JPG". "./images/hoop10.JPG", "./images/hoop11.JPG", "./images/me.jpg", "./images/me1.jpg", "./images/me2.jpg", "./images/me3.jpeg", "./images/me4.jpeg", "./images/me5.jpeg", "./images/show.jpg", "./images/show1.jpg", "./images/show2.jpg", "./images/show3.jpg", "./images/show4.jpg", "./images/show5.jpg", "./images/show6.jpg", "./images/show7.jpg", "./images/show8.jpg", "./images/show9.jpg", "./images/show10.jpeg", "./images/show11.jpeg", "./images/show12.jpeg", "./images/show13.dng", "./images/show14.dng", "./images/show15.jpeg", "./images/show16.jpeg", "./images/show17.jpeg"]; // List of image sources
-  var currentIndex = 0;
+        var images = [
+            "./images/hoop.JPEG", "./images/hoop1.JPEG", "./images/hoop2.JPEG", "./images/hoop3.JPEG", "./images/hoop4.jpg",
+            "./images/hoop5.jpg", "./images/hoop6.jpg", "./images/hoop7.JPEG", "./images/hoop8.JPG", "./images/hoop9.JPG",
+            "./images/hoop10.JPG", "./images/hoop11.JPG", "./images/me.jpg", "./images/me1.jpg", "./images/me2.jpg",
+            "./images/me3.jpeg", "./images/me4.jpeg", "./images/me5.jpeg", "./images/show.jpg", "./images/show1.jpg",
+            "./images/show2.jpg", "./images/show3.jpg", "./images/show4.jpg", "./images/show5.jpg", "./images/show6.jpg",
+            "./images/show7.jpg", "./images/show8.jpg", "./images/show9.jpg", "./images/show10.jpeg", "./images/show11.jpeg",
+            "./images/show12.jpeg", "./images/show13.dng", "./images/show14.dng", "./images/show15.jpeg", "./images/show16.jpeg",
+            "./images/show17.jpeg"
+        ];
+        var currentIndex = 0;
 
-  function openModal(imageSrc) {
-    var modal = document.getElementById('myModal');
-    var modalImg = document.getElementById('modalImg');
-    modal.style.display = "flex";
-    modalImg.src = imageSrc;
-    currentIndex = images.indexOf(imageSrc);
-  }
+        function openModal(imageSrc) {
+            var modal = document.getElementById('myModal');
+            var modalImg = document.getElementById('modalImg');
+            modal.style.display = "flex";
+            modalImg.src = imageSrc;
+            currentIndex = images.indexOf(imageSrc);
+        }
 
-  function closeModal() {
-    var modal = document.getElementById('myModal');
-    modal.style.display = "none";
-  }
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = "none";
+        }
 
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    document.getElementById('modalImg').src = images[currentIndex];
-  }
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('modalImg').src = images[currentIndex];
+        }
 
-  function previousImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    document.getElementById('modalImg').src = images[currentIndex];
-  }
+        function previousImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            document.getElementById('modalImg').src = images[currentIndex];
+        }
 </script>
         <div id="education" class="education">
         <h1 style="text-align: center;">Education and Experience</h1>
