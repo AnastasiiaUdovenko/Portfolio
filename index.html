@@ -254,68 +254,64 @@
         .education p {
             font-family: 'Prata', serif;
         }
-        .contact-box {
-            position: relative;
-            z-index: 2;
-            border: 2px solid #333;
-            border-radius: 10px;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            margin: 20px auto;
-        }
-        .contact-box h3 {
-            margin-top: 0;
-            color: #333;
-        }
-        .contact-box p {
-            color: #555;
-        }
-        .contact-box a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-        .contact-box a:hover {
-            text-decoration: underline;
-        }
-        .contact-box form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.contact-box input,
-.contact-box textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: 'Prata', serif;
-}
-
-.contact-box button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    font-family: 'Prata', serif;
-}
-
-.contact-box button:hover {
-    background-color: #45a049;
-}
-
-.contact-box i {
-    margin-right: 5px;
-} 
+    .contact-box {
+        position: relative;
+        z-index: 2;
+        border: 2px solid #333;
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 20px auto;
+    }
+    .contact-box h3 {
+        margin-top: 0;
+        color: #333;
+    }
+    .contact-box p {
+        color: #555;
+    }
+    .contact-box a {
+        color: #4CAF50;
+        text-decoration: none;
+    }
+    .contact-box a:hover {
+        text-decoration: underline;
+    }
+    .contact-box form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-box input,
+    .contact-box textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: 'Prata', serif;
+    }
+    .contact-box button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+        font-family: 'Prata', serif;
+    }
+    .contact-box button:hover {
+        background-color: #45a049;
+    }
+    .contact-box i {
+        margin-right: 5px;
+    }
     #contactme {
-    padding: 100px 20px;
-    background: url('./images/logoend.JPEG') no-repeat center center/cover;
-}
+        padding-top: 100px;
+        background: url('./images/logoend.jpg') no-repeat center center/cover;
+    }
     </style>
 </head>
 <body>
@@ -529,16 +525,17 @@
             </div>
         </div>
     </div>
-     <h3>Contact me</h3>
-    <p>Email: <a href="mailto:nastia.ydovenko@gmail.com"><i class="fas fa-envelope"></i> nastia.ydovenko@gmail.com</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/anastasia__udovenko" target="_blank"><i class="fab fa-instagram"></i> anastasia__udovenko</a></p>
-    <form>
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</div>
+    <div id="contactme" class="contact-box">
+        <h3>Contact me</h3>
+        <p>Email: <a href="mailto:nastia.ydovenko@gmail.com"><i class="fas fa-envelope"></i> nastia.ydovenko@gmail.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/anastasia__udovenko" target="_blank"><i class="fab fa-instagram"></i> anastasia__udovenko</a></p>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
 </div>           
     <!-- Add more sections for other content if needed -->
 </body>
