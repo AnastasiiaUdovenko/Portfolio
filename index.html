@@ -141,6 +141,10 @@
         .video-item {
             margin-bottom: 20px;
         }
+        .video-title {
+            color: black;
+            text-decoration: none;
+        }
         iframe {
             width: 100%;
             height: 315px;
@@ -223,7 +227,6 @@
         .education, 
         .experience {
             margin-top: 40px;
-            margin-bottom: 40px;
         }
         .education .container,
         .experience .container {
@@ -256,11 +259,10 @@
         }
         #contact-wrapper {
         padding: 100px 20px;
-        background: url('./images/logo+.JPEG') no-repeat center center/cover;
         position: relative;
         z-index: 2;
     }
-        .contact-box {
+    .contact-box {
         border: 2px solid #333;
         border-radius: 10px;
         padding: 20px;
@@ -272,13 +274,13 @@
     }
     .contact-box h3 {
         margin-top: 0;
-        color: #333;
+        color: #fff;
     }
     .contact-box p {
-        color: #555;
+        color: #fff;
     }
     .contact-box a {
-        color: #4CAF50;
+        color: #d2ba83;
         text-decoration: none;
     }
     .contact-box a:hover {
@@ -291,7 +293,6 @@
     }
     .contact-box input,
     .contact-box textarea {
-        width: 100%;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -301,7 +302,7 @@
         padding: 10px;
         border: none;
         border-radius: 5px;
-        background-color: #4CAF50;
+        background-color: #d2ba83;
         color: white;
         cursor: pointer;
         font-family: 'Prata', serif;
@@ -311,6 +312,28 @@
     }
     .contact-box i {
         margin-right: 5px;
+    }
+    .contact-section {
+      display: flex;
+      align-items: center;
+      background-color: black;
+      justify-content: center;
+    }
+
+    .contact-wrapper {
+      background-color: black;
+      padding: 20px;
+      flex: 1;
+    }
+    .contact-image-container img {
+      max-width: 300px;
+      height: auto;
+      object-fit: cover;
+    }
+    #thank-you-message {
+        display: none;
+        margin-top: 20px;
+        color: #FFFFFF;
     }
     </style>
 </head>
@@ -350,44 +373,44 @@
         <h1 style="text-align: center;">Videos</h1>
     <ul class="video-list">
         <li class="video-item">
+            <h2 class="video-title">Promo</h2>
             <a class="video-link" href="https://www.youtube.com/embed/pCsbirQaViY">
-                <h2>Promo</h2>
                 <iframe src="https://www.youtube.com/embed/pCsbirQaViY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </a>
         </li>
         <li class="video-item">
+            <h2 class="video-title">Hula hoop - Contortion act</h2>
             <a class="video-link" href="https://www.youtube.com/embed/Js4RHO5j7SQ">
-                <h2>Hula hoop - Contortion act</h2>
                 <iframe src="https://www.youtube.com/embed/Js4RHO5j7SQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </a>
         </li>
         <li class="video-item">
+            <h2 class="video-title">"Wizards in Winter" ~ Cirque Musica 2023</h2>
             <a class="video-link" href="https://www.youtube.com/embed/2j2YWaLqeIo">
-                <h2>"Wizards in Winter" ~ Cirque Musica 2023</h2>
                 <iframe src="https://www.youtube.com/embed/2j2YWaLqeIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </a>
         </li>
         <li class="video-item">
+            <h2 class="video-title">Aerial moon ~ Celebrity Cruises 2021-2023</h2>
             <a class="video-link" href="https://www.youtube.com/embed/D0NNIQ0eBkc">
-                <h2>Aerial moon ~ Celebrity Cruises 2021-2023</h2>
                 <iframe src="https://www.youtube.com/embed/D0NNIQ0eBkc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </a>
         </li>
         <li class="video-item">
+            <h2 class="video-title">Contortion ~ Celebrity Cruises 2021-2023</h2>
             <a class="video-link" href="https://www.youtube.com/embed/db67Y0X9ZKk">
-                <h2>Contortion ~ Celebrity Cruises 2021-2023</h2>
                 <iframe src="https://www.youtube.com/embed/db67Y0X9ZKk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </a>
         </li>
         <li class="video-item">
+            <h2 class="video-title">Aerial Lyra experience</h2>
             <a class="video-link" href="https://www.youtube.com/embed/iknI4urKxaY">
-                <h2>Aerial Lyra experience</h2>
                 <iframe src="https://www.youtube.com/embed/iknI4urKxaY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </a>
         </li>
         <li class="video-item">
+            <h2 class="video-title">Silks experience</h2>
             <a class="video-link" href="https://www.youtube.com/embed/P8M5aoNRzi0">
-                <h2>Silks experience</h2>
                 <iframe src="https://www.youtube.com/embed/P8M5aoNRzi0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </a>
         </li>
@@ -397,14 +420,14 @@
             </a>
         </li>
         <li class="video-item">
+            <h2 class="video-title">"Bad Girl" hula hoop ~ Celebrity Cruises 2021-2023</h2>
             <a class="video-link" href="https://www.youtube.com/embed/KBQjVvvkk0Q">
-                <h2>"Bad Girl" hula hoop ~ Celebrity Cruises 2021-2023</h2>
                 <iframe src="https://www.youtube.com/embed/KBQjVvvkk0Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </a>
         </li>
         <li class="video-item">
+            <h2 class="video-title">"Champagne Supernova" ~ Celebrity Cruises 2021-2023</h2>
             <a class="video-link" href="https://www.youtube.com/embed/PM0cf7knRHY">
-                <h2>"Champagne Supernova" ~ Celebrity Cruises 2021-2023</h2>
                 <iframe src="https://www.youtube.com/embed/PM0cf7knRHY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </a>
         </li>
@@ -515,6 +538,38 @@
             }
           }
 </script>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contact-form');
+            const thankYouMessage = document.getElementById('thank-you-message');
+
+            form.addEventListener('submit', async function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Assuming you've already validated the form fields here
+
+                // Display the thank you message
+                thankYouMessage.style.display = 'block';
+
+                // Hide the form
+                form.style.display = 'none';
+
+                // Send the form data to Formspree using fetch
+                const formData = new FormData(form);
+                try {
+                    await fetch('https://formspree.io/f/mqkrvzbe', {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                        },
+                        body: formData,
+                    });
+                } catch (error) {
+                    console.error('Error submitting form:', error);
+                }
+            });
+        });
+    </script>
         <div id="education" class="education">
         <h1 style="text-align: center;">Education and Experience</h1>
         <div class="container">
@@ -584,20 +639,29 @@
             </div>
         </div>
     </div>
+    <div class="contact-section">
+        <div class="contact-image-container">
+          <img src="./images/logo+.JPEG" alt="Contact Image">
+        </div>
     <div id="contact-wrapper">
     <div id="contactme" class="contact-box">
         <h3>Contact me</h3>
         <p>Email: <a href="mailto:nastia.ydovenko@gmail.com"><i class="fas fa-envelope"></i> nastia.ydovenko@gmail.com</a></p>
         <p>Instagram: <a href="https://www.instagram.com/anastasia__udovenko" target="_blank"><i class="fab fa-instagram"></i> anastasia__udovenko</a></p>
-        <form>
+        <form id="contact-form">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
+        <div id="thank-you-message">
+            <p>Thank you for your message! We'll get back to you soon.</p>
+        </div>
     </div>
 </div>  
+</div>
         </div>
     <!-- Add more sections for other content if needed -->
 </body>
 </html>
+
