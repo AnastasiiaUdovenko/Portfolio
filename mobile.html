@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasiia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <style> 
+        body, html {
+            margin: 0;
+            tpadding: 0;
+            font-family: 'Prata', serif;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            height: 80px;
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .navbar .logo img {
+            width: 80px;
+            height: auto;
+        }
+        .navbar .nav-dropdown {
+    position: relative;
+}
+
+.navbar .dropdown-button {
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .dropdown-button:hover {
+    background-color: #cccccc;
+    color: #000000;
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+.navbar .dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: left;
+    color: #000000;
+}
+
+.navbar .dropdown-content button:hover {
+    background-color: #f0f0f0;
+}
+
+.navbar .dropdown-button:focus + .dropdown-content,
+.navbar .dropdown-content:hover {
+    display: block; 
+}
+
+.navbar .dropdown-content {
+    display: none;
+}
+
+/* Styles for the dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-color: white; /* Background color */
+  overflow-y: auto; /* Scroll if content overflows */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+        body {
+            margin-top: 40px;
+        }
+        .full-screen-image {
+            background-image: url('./images/nastiaHomepage.JPG');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+        }
+       .about {
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+            min-height: 100vh;
+            justify-content: center;
+        }
+        .about .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 95%;
+            margin: auto;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+        
+        .about .top {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        
+        .about .container img {
+            margin: 20px 0;
+            display: block;
+        }
+         
+        .about .image {
+            display: flex:
+            justify-content: center;
+            width: 100%;
+        } 
+
+        .about .image img {
+            border-radius: 50%;
+            width: 150px; /* Adjust size as needed */
+            height: 150px; /* Maintain aspect ratio */
+            object-fit: cover;
+            margin: 20px 0;
+        }
+
+        .about .bottom {
+            width: 100%;
+            padding: 0 20px;
+
+        }
+        .about .bottom p {
+            font-size: 16px;
+        }
+        .about .text {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        .about .text-content {
+            padding: 0 20px;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        .about .text-content p {
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-family: 'Prata', serif;
+            font-size: 54px;
+            padding: 20px;
+            margin: 0;
+        }
+        h2 {
+            font-family: 'Prata', serif;
+        }
+        .videos {
+            padding-top: 100px;
+        }
+        .video-list {
+            align-items: end;
+            grid-auto-rows: 1fr;
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        .video-item {
+            margin-bottom: 20px;
+        }
+        .video-title {
+            color: black;
+            text-decoration: none;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+        }
+        .pictures {
+            padding-top: 100px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .gallery img {
+            max-width: 100%;
+            max-height: 100%;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .modal {
+            display: none;
+            justify-content: center;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 0px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .close {
+            color: #fff;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 2001;
+        }
+        .pointer-left,
+        .pointer-right {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            cursor: pointer;
+            z-index: 2001;
+            color: white;
+            font-size: 30px;
+            user-select: none;
+            transition: background-color 0.3s;
+        }
+        .pointer-left {
+            left: 10px;
+        }
+        .pointer-right {
+            right: 10px;
+        }
+        .pointer-left:hover,
+        .pointer-right:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 50%;
+        }
+        .education {
+            padding-top: 100px;
+        }
+        .education, 
+        .experience {
+            margin-top: 40px;
+        }
+        .education .container,
+        .experience .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 40px;
+        }
+        .experience-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .experience-item:hover {
+            transform: translateY(-5px);
+        }
+        .experience-item img {
+            width: 120px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .education p {
+            font-family: 'Prata', serif;
+        }
+        #contact-wrapper {
+        padding: 100px 20px;
+        position: relative;
+        z-index: 2;
+    }
+    .contact-box {
+        border: 2px solid #333;
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 0 auto;
+    }
+    .contact-box h3 {
+        margin-top: 0;
+        color: #fff;
+    }
+    .contact-box p {
+        color: #fff;
+    }
+    .contact-box a {
+        color: #d2ba83;
+        text-decoration: none;
+    }
+    .contact-box a:hover {
+        text-decoration: underline;
+    }
+    .contact-box form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-box input,
+    .contact-box textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: 'Prata', serif;
+    }
+    .contact-box button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #d2ba83;
+        color: white;
+        cursor: pointer;
+        font-family: 'Prata', serif;
+    }
+    .contact-box button:hover {
+        background-color: #45a049;
+    }
+    .contact-box i {
+        margin-right: 5px;
+    }
+    .contact-section {
+      display: flex;
+      align-items: center;
+      background-color: black;
+      justify-content: center;
+    }
+
+    .contact-wrapper {
+      background-color: black;
+      padding: 20px;
+      flex: 1;
+    }
+    .contact-image-container img {
+      max-width: 300px;
+      height: auto;
+      object-fit: cover;
+    }
+    #thank-you-message {
+        display: none;
+        margin-top: 20px;
+        color: #FFFFFF;
+    }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="./images/IMG_2377.jpeg" alt="Your Logo">
+        </div>
+    <div class="nav-dropdown">
+        <button class="dropdown-button">☰</button>
+        <div class="dropdown-content">
+            <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About</button>
+            <button onclick="document.getElementById('videos').scrollIntoView({behavior: 'smooth'})">Videos</button>
+            <button onclick="document.getElementById('pictures').scrollIntoView({behavior: 'smooth'})">Pictures</button>
+            <button onclick="document.getElementById('education').scrollIntoView({behavior: 'smooth'})">Education and Experience</button>
+            <button onclick="document.getElementById('contactme').scrollIntoView({behavior: 'smooth'})">Contact</button>
+        </div>
+    </div>
+</div>
+    <div class="full-screen-image"></div>
+    <div id="about" class="about">
+        <h1>About</h1>
+        <div class="container">
+            <div class="top">
+                <div class="image">
+                    <img src="./images/me.jpg" alt="me">
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="text">
+                    <div class="text-content">
+                        <p>Welcome to the world of wonder and artistry of Anastasiia, a professional circus performer specializing in hula-hoop, contortion, and aerial performances. Born in a beautiful small town in Ukraine, Anastasiia’s journey into the world of performance began at an early age.</p>
+                        <p>At the age of seven, she joined the children’s circus studio "Melange-Art," and this early exposure to the circus arts led to a significant milestone in 2016 when, as part of a group of neon jugglers, Anastasiia became a finalist on "Ukrainian Got Talent. Kids."</p>
+                        <p>From 2017 to 2018, her skills and passion took her to the renowned Ukrainian circus Kobzov, where she performed as a neon and fire juggler of the ballet. This period was incredibly enriching and solidified her passion and love for performing and circus arts.</p>
+                        <p>In 2018, Anastasiia furthered her skills by entering the Kiev Municipal Academy of Circus and Performing Arts. There, she studied juggling, contortion with hoops, acting, pantomime, and both classical and modern choreography, graduating with a Junior Specialist degree in 2021 and embarking on a journey toward earning a Bachelor’s degree. At the Academy, she was mentored by Iryna Pitsur, a renowned artist and coach, who played a crucial role in shaping Anastasiia’s unique style and performance techniques.</p>
+                        <p>Anastasiia’s act is a combination of grace, sensuality, and the aesthetics of professional hooping tricks, all brought to life with beautiful costumes and music written especially for the performance. It’s a new vision of hula-hoop art, directed by Iryna Pitsur.</p>
+                        <p>Anastasiia has had the privilege of collaborating with Celebrity Cruises, being part of their inaugural cast on the launch of their new ship, Celebrity Beyond. This opportunity allowed her to work with esteemed producers such as Dondraico Johnson, Michelle Lynskey, Holly Palmer, and Michael Fatice, enriching the shows with her expertise in hula-hoop, contortion, and aerial acts. Additionally, Anastasiia has toured across the USA, bringing joy, wonder, and inspiration to diverse audiences.</p>
+                        <p>This is just the beginning of her adventure in the performing arts, and having had many opportunities to showcase her talent on stages all over the world, it creates a burning excitement in her to see where the journey takes her next!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="videos" class="videos">
+        <h1 style="text-align: center;">Videos</h1>
+    <ul class="video-list">
+        <li class="video-item">
+            <h2 class="video-title">Promo</h2>
+            <a class="video-link" href="https://www.youtube.com/embed/pCsbirQaViY">
+                <iframe src="https://www.youtube.com/embed/pCsbirQaViY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <h2 class="video-title">Hula hoop - Contortion act</h2>
+            <a class="video-link" href="https://www.youtube.com/embed/Js4RHO5j7SQ">
+                <iframe src="https://www.youtube.com/embed/Js4RHO5j7SQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <h2 class="video-title">"Wizards in Winter" ~ Cirque Musica 2023</h2>
+            <a class="video-link" href="https://www.youtube.com/embed/2j2YWaLqeIo">
+                <iframe src="https://www.youtube.com/embed/2j2YWaLqeIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <h2 class="video-title">Aerial moon ~ Celebrity Cruises 2021-2023</h2>
+            <a class="video-link" href="https://www.youtube.com/embed/D0NNIQ0eBkc">
+                <iframe src="https://www.youtube.com/embed/D0NNIQ0eBkc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <h2 class="video-title">Contortion ~ Celebrity Cruises 2021-2023</h2>
+            <a class="video-link" href="https://www.youtube.com/embed/db67Y0X9ZKk">
+                <iframe src="https://www.youtube.com/embed/db67Y0X9ZKk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <h2 class="video-title">Aerial Lyra experience</h2>
+            <a class="video-link" href="https://www.youtube.com/embed/iknI4urKxaY">
+                <iframe src="https://www.youtube.com/embed/iknI4urKxaY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <h2 class="video-title">Silks experience</h2>
+            <a class="video-link" href="https://www.youtube.com/embed/P8M5aoNRzi0">
+                <iframe src="https://www.youtube.com/embed/P8M5aoNRzi0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <a class="video-link" href="https://www.youtube.com/embed/FvP84u08ppQ">
+                <iframe src="https://www.youtube.com/embed/FvP84u08ppQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <h2 class="video-title">"Bad Girl" hula hoop ~ Celebrity Cruises 2021-2023</h2>
+            <a class="video-link" href="https://www.youtube.com/embed/KBQjVvvkk0Q">
+                <iframe src="https://www.youtube.com/embed/KBQjVvvkk0Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+        <li class="video-item">
+            <h2 class="video-title">"Champagne Supernova" ~ Celebrity Cruises 2021-2023</h2>
+            <a class="video-link" href="https://www.youtube.com/embed/PM0cf7knRHY">
+                <iframe src="https://www.youtube.com/embed/PM0cf7knRHY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </li>
+     </ul>   
+        <div id="pictures" class="pictures">
+        <h1 style="text-align: center;">Pictures</h1>
+        <div class="gallery">
+        <img src="./images/hoop.jpeg" alt="Image 1" onclick="openModal('./images/hoop.jpeg')">
+        <img src="./images/hoop1.JPEG" alt="Image 2" onclick="openModal('./images/hoop1.JPEG')">
+        <img src="./images/hoop2.JPEG" alt="Image 3" onclick="openModal('./images/hoop2.JPEG')">
+        <img src="./images/hoop3.jpeg" alt="Image 4" onclick="openModal('./images/hoop3.jpeg')">
+        <img src="./images/hoop4.jpg" alt="Image 5" onclick="openModal('./images/hoop4.jpg')">
+        <img src="./images/hoop5.jpg" alt="Image 6" onclick="openModal('./images/hoop5.jpg')">
+        <img src="./images/hoop6.jpg" alt="Image 7" onclick="openModal('./images/hoop6.jpg')">
+        <img src="./images/hoop7.jpeg" alt="Image 8" onclick="openModal('./images/hoop7.jpeg')">
+        <img src="./images/hoop8.jpg" alt="Image 9" onclick="openModal('./images/hoop8.jpg')">
+        <img src="./images/hoop9.jpg" alt="Image 10" onclick="openModal('./images/hoop9.jpg')">
+        <img src="./images/hoop10.jpg" alt="Image 11" onclick="openModal('./images/hoop10.jpg')">
+        <img src="./images/hoop11.jpg" alt="Image 12" onclick="openModal('./images/hoop11.jpg')">
+        <img src="./images/hoop12.jpg" alt="Image 13" onclick="openModal('./images/hoop12.jpg')">
+        <img src="./images/hoop13.jpg" alt="Image 14" onclick="openModal('./images/hoop13.jpg')">
+        <img src="./images/hoop14.jpg" alt="Image 15" onclick="openModal('./images/hoop14.jpg')">
+        <img src="./images/me.jpg" alt="Image 13" onclick="openModal('./images/me.jpg')">
+        <img src="./images/me1.jpg" alt="Image 14" onclick="openModal('./images/me1.jpg')">
+        <img src="./images/me2.jpg" alt="Image 15" onclick="openModal('./images/me2.jpg')">
+        <img src="./images/me3.jpeg" alt="Image 16" onclick="openModal('./images/me3.jpeg')">
+        <img src="./images/me4.jpeg" alt="Image 17" onclick="openModal('./images/me4.jpeg')">
+        <img src="./images/me5.jpg" alt="Image 18" onclick="openModal('./images/me5.jpg')">
+        <img src="./images/me6.jpg" alt="Image 19" onclick="openModal('./images/me6.jpg')">
+        <img src="./images/me7.jpg" alt="Image 20" onclick="openModal('./images/me7.jpg')">
+        <img src="./images/me8.jpg" alt="Image 21" onclick="openModal('./images/me8.jpg')">
+        <img src="./images/me9.jpg" alt="Image 22" onclick="openModal('./images/me9.jpg')">
+        <img src="./images/me10.jpg" alt="Image 23" onclick="openModal('./images/me10.jpg')">
+        <img src="./images/show.jpg" alt="Image 24" onclick="openModal('./images/show.jpg')">
+        <img src="./images/show1.jpg" alt="Image 25" onclick="openModal('./images/show1.jpg')">
+        <img src="./images/show2.jpg" alt="Image 26" onclick="openModal('./images/show2.jpg')">
+        <img src="./images/show3.jpg" alt="Image 27" onclick="openModal('./images/show3.jpg')">
+        <img src="./images/show4.jpg" alt="Image 28" onclick="openModal('./images/show4.jpg')">
+        <img src="./images/show5.jpg" alt="Image 29" onclick="openModal('./images/show5.jpg')">
+        <img src="./images/show6.jpg" alt="Image 30" onclick="openModal('./images/show6.jpg')">
+        <img src="./images/show7.jpg" alt="Image 31" onclick="openModal('./images/show7.jpg')">
+        <img src="./images/show8.jpg" alt="Image 32" onclick="openModal('./images/show8.jpg')">
+        <img src="./images/show9.jpg" alt="Image 33" onclick="openModal('./images/show9.jpg')">
+        <img src="./images/show10.jpeg" alt="Image 34" onclick="openModal('./images/show10.jpeg')">
+        <img src="./images/show11.jpeg" alt="Image 35" onclick="openModal('./images/show11.jpeg')">
+        <img src="./images/show12.jpeg" alt="Image 36" onclick="openModal('./images/show12.jpeg')">
+        <img src="./images/show13.jpeg" alt="Image 37" onclick="openModal('./images/show13.jpeg')">
+        <img src="./images/show14.jpeg" alt="Image 38" onclick="openModal('./images/show14.jpeg')">
+        <img src="./images/show15.jpeg" alt="Image 39" onclick="openModal('./images/show15.jpeg')">
+        <img src="./images/show16.jpeg" alt="Image 40" onclick="openModal('./images/show16.jpeg')">
+        <img src="./images/show17.jpeg" alt="Image 41" onclick="openModal('./images/show17.jpeg')">
+  <!-- Add more images here -->
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div class="pointer-left" onclick="previousImage()">
+      <i class="fas fa-chevron-left"></i>
+  </div>
+  <img class="modal-content" id="modalImg">
+  <div class="pointer-right" onclick="nextImage()">
+      <i class="fas fa-chevron-right"></i>
+  </div>
+</div>
+
+<script>
+        var images = [
+            "./images/hoop.jpeg", "./images/hoop1.JPEG", "./images/hoop2.JPEG", "./images/hoop3.jpeg", "./images/hoop4.jpg",
+            "./images/hoop5.jpg", "./images/hoop6.jpg", "./images/hoop7.jpeg", "./images/hoop8.jpg", "./images/hoop9.jpg",
+            "./images/hoop10.jpg", "./images/hoop11.jpg", "./images/hoop12.jpg", "./images/hoop13.jpg", "./images/hoop14.jpg", "./images/me.jpg", "./images/me1.jpg", "./images/me2.jpg",
+            "./images/me3.jpeg", "./images/me4.jpeg", "./images/me5.jpg", "./images/me6.jpg", "./images/me7.jpg", "./images/me8.jpg", "./images/me9.jpg", "./images/me10.jpg", "./images/show.jpg", "./images/show1.jpg",
+            "./images/show2.jpg", "./images/show3.jpg", "./images/show4.jpg", "./images/show5.jpg", "./images/show6.jpg",
+            "./images/show7.jpg", "./images/show8.jpg", "./images/show9.jpg", "./images/show10.jpeg", "./images/show11.jpeg",
+            "./images/show12.jpeg", "./images/show13.jpeg", "./images/show14.jpeg", "./images/show15.jpeg", "./images/show16.jpeg",
+            "./images/show17.jpeg"
+        ];
+        var currentIndex = 0;
+
+        function openModal(imageSrc) {
+            var modal = document.getElementById('myModal');
+            var modalImg = document.getElementById('modalImg');
+            modal.style.display = "flex";
+            modalImg.src = imageSrc;
+            currentIndex = images.indexOf(imageSrc);
+            document.addEventListener('keydown', handleKeydown);
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = "none";
+            document.removeEventListener('keydown', handleKeydown);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('modalImg').src = images[currentIndex];
+        }
+
+        function previousImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            document.getElementById('modalImg').src = images[currentIndex];
+        }
+        function handleKeydown(event) {
+            if (event.key === "ArrowRight") {
+              nextImage();
+            } else if (event.key === "ArrowLeft") {
+              previousImage();
+            }
+          }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdownButton = document.querySelector('.dropdown-button');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        dropdownButton.addEventListener('click', () => {
+            const isVisible = dropdownContent.style.display === 'block';
+            dropdownContent.style.display = isVisible ? 'none' : 'block';
+        });
+
+        // Close the dropdown if clicked outside
+        document.addEventListener('click', (event) => {
+            if (!dropdownButton.contains(event.target) && !dropdownContent.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+    });
+</script>
+        <div id="education" class="education">
+        <h1 style="text-align: center;">Education and Experience</h1>
+        <div class="container">
+        
+            <h2>Education</h2>
+            <p>
+                Anastasiia in 2021 completed the full course of the Kyiv Municipal Academy of Circus and Performing Arts. And received the diploma with honors in the field of Study Culture and Arts, Programme Subject Area -- Performing arts.
+            </p>
+        </div>
+
+        <!-- Experience Section -->
+        <div id="experience" class="experience">
+            <div class="container">
+                <h2>Experience</h2>
+            <!-- Experience Item 1 -->
+            <div class="experience-item">
+                <img src="./images/hoop8.jpg" alt="Example Image">
+                <div class="info">
+                    <p><strong>Date:</strong> Nov 2023 - Jan 2024 </p>
+                    <p><strong>Company:</strong> Cirque Musica </p> 
+                    <p><strong>Description:</strong> The tour across the United States gave Anastasiia the chance to experience all the joys of bus touring, and it was pleasant for her to provide people with a Christmas mood. </p>
+                </div>
+            </div>
+            <!-- Experience Item 2 -->
+            <div class="experience-item">
+                <img src="./images/show16.jpeg" alt="Example Image">
+                <div class="info">
+                    <p><strong>Date:</strong> Jan 2024 - Mar 2024/Jan 2022 - Jul 2023 </p>
+                    <p><strong>Company:</strong> Celebrity Cruises Inc. </p>
+                    <p><strong>Description:</strong> Anastasiia had the privilege of doing several contracts with Celebrity Cruises, and was apart of
+                    their inaugural cast on the launch of their new ship Celebrity Beyond. She took part in
+                    the creation of their shows which gave her the opportunity to work along side well
+                    known producers such as Dondraico Johnson, Michelle Lynskey, Holly Palmer and
+                    Michael Fatice. She was given great exposure in this process to enhance the shows with
+                    multiple images, and work with multiple disciplines being hula-hoop, contortion, and
+                    aerial acts. </p>
+                </div>
+            </div>
+            <!-- Experience Item 3 -->
+            <div class="experience-item">
+                <img src="./images/hoop6.jpg" alt="Example Image">
+                <div class="info">
+                    <p><strong>Date:</strong> Dec 2021 - Jan 2022 </p>
+                    <p><strong>Company:</strong> Theatre "Rizoma" </p>
+                    <p><strong>Description:</strong> Anastasiia was working in Christmas show called "Alice in Wonderland " under the production
+                    of very famous artist Anatoliy Zalevskiy who known as a double gold medalist of
+                    "Monte-Carlo circus festival" and "Cirque de Demain". </p>
+                </div>
+            </div>
+            <!-- Experience Item 4 -->
+            <div class="experience-item">
+                <img src="./images/neon.jpg" alt="Example Image">
+                <div class="info">
+                    <p><strong>Date:</strong> Jul 2021 - Oct 2021/Apr 2019 - Oct 2019 </p>
+                    <p><strong>Company:</strong> Ezgi Event </p>
+                    <p><strong>Description:</strong> Doing these contracts Anastasiia improved her leadership and artistic abilities, as she was a Dance Capitan. </p>
+                </div>
+            </div>
+            <!-- Experience Item 5 -->
+            <div class="experience-item">
+                <img src="./images/kobzov.JPG" alt="Example Image">
+                <div class="info">
+                    <p><strong>Date:</strong> Mar 2017 - Sep 2018 </p>
+                    <p><strong>Company:</strong> Circus "Kobzov" </p> 
+                    <p><strong>Description:</strong> Anastasiia has done multiple contracts with the biggest travel circus in Ukraine as a Dance Capitan doing neon and fire performances. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-section">
+        <div class="contact-image-container">
+          <img src="./images/IMG_2377.jpeg" alt="Contact Image">
+        </div>
+    <div id="contact-wrapper">
+    <div id="contactme" class="contact-box">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:nastia.ydovenko@gmail.com"><i class="fas fa-envelope"></i> nastia.ydovenko@gmail.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/anastasia__udovenko" target="_blank"><i class="fab fa-instagram"></i> anastasia__udovenko</a></p>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="thank-you-message">
+            <p>Thank you for your message! We'll get back to you soon.</p>
+        </div>
+    </div>
+</div>  
+</div>
+        </div>
+    <!-- Add more sections for other content if needed -->
+</body>
+</html>
