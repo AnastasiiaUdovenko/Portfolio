@@ -213,7 +213,7 @@
 /* For very small screens, adjust to one column */
 @media (max-width: 480px) {
     .video-list {
-        grid-template-columns: 1fr; /* One column */
+        grid-template-columns: repeat(2, 1fr); /* One column */
     }
 }
         iframe {
@@ -627,22 +627,41 @@
           }
 </script>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const dropdownButton = document.querySelector('.dropdown-button');
-        const dropdownContent = document.querySelector('.dropdown-content');
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all dropdown buttons
+    const dropdownButtons = document.querySelectorAll('.dropdown-button');
 
-        dropdownButton.addEventListener('click', () => {
-            const isVisible = dropdownContent.style.display === 'block';
-            dropdownContent.style.display = isVisible ? 'none' : 'block';
-        });
+    dropdownButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            // Close other open dropdowns
+            const openDropdowns = document.querySelectorAll('.dropdown-content');
+            openDropdowns.forEach(dropdown => {
+                if (dropdown !== button.nextElementSibling) {
+                    dropdown.style.display = 'none';
+                }
+            });
 
-        // Close the dropdown if clicked outside
-        document.addEventListener('click', (event) => {
-            if (!dropdownButton.contains(event.target) && !dropdownContent.contains(event.target)) {
-                dropdownContent.style.display = 'none';
+            // Toggle current dropdown
+            const dropdown = button.nextElementSibling;
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
             }
         });
     });
+
+    // Close dropdown if clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.navbar')) {
+            const openDropdowns = document.querySelectorAll('.dropdown-content');
+            openDropdowns.forEach(dropdown => {
+                dropdown.style.display = 'none';
+            });
+        }
+    });
+});
+</script>
 </script>
         <div id="education" class="education">
         <h1 style="text-align: center;">Education and Experience</h1>
