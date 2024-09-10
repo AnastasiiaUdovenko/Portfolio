@@ -14,43 +14,139 @@
             font-family: 'Prata', serif;
             scroll-behavior: smooth;
         }
-        .navbar {
-            height: 80px;
-            background-color: #000000;
-            color: #ffffff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-        }
-        .navbar .logo img {
-            width: 80px;
-            height: auto;
-        }
-        .navbar .nav-buttons {
-            display: flex;
-        }
-        .navbar .nav-buttons button {
-            margin: 0 5px;
-            padding: 8px 16px;
-            font-size: 1em;
-            cursor: pointer;
-            font-family: 'Prata', serif;
-            color: #000000;
-            background-color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .navbar .nav-buttons button:hover {
-            background-color: #cccccc;
-            color: #000000;
-        }
+/* Common navbar styles for both desktop and mobile */
+.navbar {
+    height: 80px;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    width: 80px;
+    height: auto;
+}
+
+/* Desktop-specific styles */
+.navbar .nav-buttons {
+    display: flex;
+}
+
+.navbar .nav-buttons button {
+    margin: 0 5px;
+    padding: 8px 16px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: 'Prata', serif;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-buttons button:hover {
+    background-color: #cccccc;
+    color: #000000;
+}
+
+/* Mobile-specific dropdown menu */
+.navbar .nav-dropdown {
+    position: relative;
+    display: none; /* Hidden on desktop */
+}
+
+.navbar .dropdown-button {
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .dropdown-button:hover {
+    background-color: #cccccc;
+    color: #000000;
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+.navbar .dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: left;
+    color: #000000;
+}
+
+.navbar .dropdown-content button:hover {
+    background-color: #f0f0f0;
+}
+
+.navbar .dropdown-button:focus + .dropdown-content,
+.navbar .dropdown-content:hover {
+    display: block;
+}
+
+/* Mobile fullscreen dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-color: white; /* Background color */
+  overflow-y: auto; /* Scroll if content overflows */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Media queries to control visibility based on screen size */
+
+/* For desktop (screens wider than 768px) */
+@media (min-width: 769px) {
+    .nav-dropdown {
+        display: none; /* Hide mobile dropdown on desktop */
+    }
+
+    .nav-buttons {
+        display: flex; /* Show desktop buttons */
+    }
+}
+
+/* For mobile (screens smaller than 768px) */
+@media (max-width: 768px) {
+    .nav-buttons {
+        display: none; /* Hide desktop buttons on mobile */
+    }
+
+    .nav-dropdown {
+        display: block; /* Show mobile dropdown on mobile */
+    }
+}
         body {
             margin-top: 80px;
         }
