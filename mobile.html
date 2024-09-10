@@ -213,9 +213,8 @@
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 10px;
-            justify-content: center;
             padding: 20px;
         }
         .gallery img {
@@ -230,7 +229,7 @@
         }
 
         @media (max-wedth: 768px) {
-            .hallery {
+            .gallery {
                 hrid-template-columns: repet(2, 1fr);
             }
         }
