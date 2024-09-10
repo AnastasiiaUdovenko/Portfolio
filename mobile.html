@@ -632,47 +632,47 @@ function handleKeydown(event) {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all dropdown buttons
     const dropdownButtons = document.querySelectorAll('.dropdown-button');
-    const dropdownLinks = document.querySelectorAll('.dropdown-content a'); // Adjust this selector if needed
+    const dropdownContents = document.querySelectorAll('.dropdown-content');
 
     dropdownButtons.forEach(button => {
         button.addEventListener('click', function(event) {
             // Close other open dropdowns
-            const openDropdowns = document.querySelectorAll('.dropdown-content');
-            openDropdowns.forEach(dropdown => {
-                if (dropdown !== button.nextElementSibling) {
-                    dropdown.style.display = 'none';
+            dropdownContents.forEach(content => {
+                if (content !== button.nextElementSibling) {
+                    content.style.display = 'none';
                 }
             });
 
-            // Toggle current dropdown
+            // Toggle the current dropdown
             const dropdown = button.nextElementSibling;
             if (dropdown.style.display === 'block') {
                 dropdown.style.display = 'none';
             } else {
                 dropdown.style.display = 'block';
             }
+
+            // Prevent click event from bubbling up and closing the dropdown immediately
+            event.stopPropagation();
         });
     });
 
     // Close dropdown if clicking outside
     document.addEventListener('click', function(event) {
         if (!event.target.closest('.navbar')) {
-            const openDropdowns = document.querySelectorAll('.dropdown-content');
-            openDropdowns.forEach(dropdown => {
+            dropdownContents.forEach(dropdown => {
                 dropdown.style.display = 'none';
             });
         }
     });
 
-    // Close dropdown when a link is clicked
-    dropdownLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            const dropdown = this.closest('.dropdown-content');
-            if (dropdown) {
-                dropdown.style.display = 'none';
-            }
+    // Close dropdown when a button inside the dropdown is clicked
+    dropdownContents.forEach(content => {
+        const buttons = content.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                content.style.display = 'none';
+            });
         });
     });
 });
