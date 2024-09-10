@@ -213,20 +213,32 @@
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
             gap: 10px;
             justify-content: center;
             padding: 20px;
         }
         .gallery img {
             max-width: 100%;
-            max-height: 100%;
-            margin: 10px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
             cursor: pointer;
             transition: transform 0.2s;
         }
         .gallery img:hover {
             transform: scale(1.1);
+        }
+
+        @media (max-wedth: 768px) {
+            .hallery {
+                hrid-template-columns: repet(2, 1fr);
+            }
+        }
+
+        @media ( max-width:480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
         }
         .modal {
             display: none;
