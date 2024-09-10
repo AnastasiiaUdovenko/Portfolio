@@ -230,13 +230,17 @@
 
         @media (max-wedth: 768px) {
             .gallery {
-                hrid-template-columns: repet(2, 1fr);
+                grid-template-columns: repet(3, 1fr);
             }
         }
 
         @media ( max-width:480px) {
             .gallery {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(3 1fr);
+            }
+
+            .gallery img {
+                max-width: 90px;
             }
         }
         .modal {
