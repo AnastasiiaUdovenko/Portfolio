@@ -634,6 +634,7 @@ function handleKeydown(event) {
 document.addEventListener('DOMContentLoaded', function() {
     // Get all dropdown buttons
     const dropdownButtons = document.querySelectorAll('.dropdown-button');
+    const dropdownLinks = document.querySelectorAll('.dropdown-content a'); // Adjust this selector if needed
 
     dropdownButtons.forEach(button => {
         button.addEventListener('click', function(event) {
@@ -663,6 +664,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 dropdown.style.display = 'none';
             });
         }
+    });
+
+    // Close dropdown when a link is clicked
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const dropdown = this.closest('.dropdown-content');
+            if (dropdown) {
+                dropdown.style.display = 'none';
+            }
+        });
     });
 });
 </script>
