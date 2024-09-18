@@ -315,11 +315,7 @@
             padding-top: 100px;
         }
         .education, 
-        .experience {
-            margin-top: 40px;
-        }
-        .education .container,
-        .experience .container {
+.experience .container {
     width: 80%;
     max-width: 1200px;
     margin: auto;
@@ -328,7 +324,7 @@
 
 .experience-item {
     display: flex;
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: column;
     margin-bottom: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -354,16 +350,9 @@
     margin-right: 20px;
 }
 
-.experience-item-content {
+.experience-item-info {
     display: flex;
     flex-direction: column;
-    width: 100%; /* Ensure full width of the description */
-}
-
-.experience-item-header-info {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* Ensure the text takes up remaining space */
 }
 
 .experience-item-date {
@@ -378,10 +367,10 @@
 }
 
 .experience-item-description {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 14px;
     color: #555;
-    width: 100%; /* Span the full width */
+    width: 100%; /* Span full width below the image and text */
 }
         .education p {
             font-family: 'Prata', serif;
