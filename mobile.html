@@ -315,74 +315,31 @@
             padding-top: 100px;
         }
         .education, 
-/* General Styling */
-.experience .container {
-    width: 80%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 40px;
-}
-
-.experience-item {
-    display: flex;
-    flex-direction: column; /* Stack header and description vertically */
-    margin-bottom: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-.experience-item:hover {
-    transform: translateY(-5px);
-}
-
-.experience-item-header {
-    display: flex;
-    align-items: flex-start; /* Align image and text at the top */
-    margin-bottom: 10px;
-}
-
-.experience-item img {
-    width: 120px;
-    height: 120px; /* Make the image square */
-    border-radius: 5px;
-    margin-right: 20px;
-}
-
-.experience-item-header-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.experience-item-header-info p,
-.experience-item-description p {
-    font-size: 14px; /* Consistent text size */
-    color: #555; /* Consistent text color */
-    margin: 5px 0;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .experience-item-header {
-        flex-direction: column; /* Stack the image and text on top of each other */
-        align-items: center; /* Center align the image and text */
-        text-align: center; /* Center align the text for better mobile display */
-    }
-
-    .experience-item img {
-        margin-bottom: 10px; /* Add spacing between image and text on mobile */
-    }
-
-    .experience-item-header-info {
-        align-items: center; /* Center align the text under the image */
-    }
-
-    .experience-item-description {
-        text-align: center; /* Center align the description */
-    }
-}
+        .experience .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 40px;
+        }
+        .experience-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .experience-item:hover {
+            transform: translateY(-5px);
+        }
+        .experience-item img {
+            width: 120px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
         .education p {
             font-family: 'Prata', serif;
         }
@@ -735,18 +692,14 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="container">
                 <h2>Experience</h2>
             <!-- Experience Item 1 -->
-                    <div class="experience-item">
-            <div class="experience-item-header">
+            <div class="experience-item">
                 <img src="./images/hoop8.jpg" alt="Example Image">
-                <div class="experience-item-header-info">
-                    <p><strong>Date:</strong> Nov 2023 - Jan 2024</p>
-                    <p><strong>Company:</strong> Cirque Musica</p> 
+                <div class="info">
+                    <p><strong>Date:</strong> Nov 2023 - Jan 2024 </p>
+                    <p><strong>Company:</strong> Cirque Musica </p> 
+                    <p><strong>Description:</strong> The tour across the United States gave Anastasiia the chance to experience all the joys of bus touring, and it was pleasant for her to provide people with a Christmas mood. </p>
                 </div>
             </div>
-            <div class="experience-item-description">
-                <p><strong>Description:</strong> The tour across the United States gave Anastasiia the chance to experience all the joys of bus touring, and it was pleasant for her to provide people with a Christmas mood.</p>
-            </div>
-        </div>
             <!-- Experience Item 2 -->
             <div class="experience-item">
                 <img src="./images/show16.jpeg" alt="Example Image">
