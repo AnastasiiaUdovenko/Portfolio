@@ -320,30 +320,61 @@
         }
         .education .container,
         .experience .container {
-            width: 80%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 40px;
-        }
-        .experience-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-        .experience-item:hover {
-            transform: translateY(-5px);
-        }
-        .experience-item img {
-            width: 120px;
-            height: auto;
-            border-radius: 5px;
-            margin-right: 20px;
-        }
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+.experience-item {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+}
+
+.experience-item img {
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.experience-item-content {
+    display: flex;
+    flex-direction: column; /* Stack the date, company, and description vertically */
+}
+
+.experience-item-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.experience-item-date {
+    font-size: 14px;
+    color: #888;
+}
+
+.experience-item-company {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.experience-item-description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
         .education p {
             font-family: 'Prata', serif;
         }
