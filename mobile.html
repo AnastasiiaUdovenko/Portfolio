@@ -328,7 +328,7 @@
 
 .experience-item {
     display: flex;
-    align-items: flex-start; /* Align items to the top */
+    flex-direction: column; /* Stack content vertically */
     margin-bottom: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -341,22 +341,29 @@
     transform: translateY(-5px);
 }
 
+.experience-item-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 .experience-item img {
     width: 120px;
-    height: auto;
+    height: 120px; /* Make the image square */
     border-radius: 5px;
     margin-right: 20px;
 }
 
 .experience-item-content {
     display: flex;
-    flex-direction: column; /* Stack the date, company, and description vertically */
+    flex-direction: column;
+    width: 100%; /* Ensure full width of the description */
 }
 
-.experience-item-header {
+.experience-item-header-info {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
+    flex-grow: 1; /* Ensure the text takes up remaining space */
 }
 
 .experience-item-date {
@@ -367,13 +374,14 @@
 .experience-item-company {
     font-size: 16px;
     font-weight: bold;
-    margin-left: 10px;
+    margin-top: 5px;
 }
 
 .experience-item-description {
     margin-top: 10px;
     font-size: 14px;
     color: #555;
+    width: 100%; /* Span the full width */
 }
         .education p {
             font-family: 'Prata', serif;
