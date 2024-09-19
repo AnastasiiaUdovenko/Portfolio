@@ -312,47 +312,57 @@
             border-radius: 50%;
         }
         .education {
-            padding-top: 100px;
-        }
-        .education, 
-        .experience {
-            margin-top: 40px;
-        }
-        .education, 
-        .experience .container {
-            width: 80%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 40px;
-        }
-        .experience-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-        .experience-item:hover {
-            transform: translateY(-5px);
-        }
-        .experience-item img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-right: 20px;
-        }
-        .experience-item:nth-child(2) img,
+    padding-top: 100px;
+}
+
+.education, 
+.experience {
+    margin-top: 40px;
+}
+
+.education, 
+.experience .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+/* Set experience-item width to match the Education text width */
+.experience-item {
+    width: 100%; /* Take up full width of the container */
+    max-width: 1200px; /* Match the max-width of Education text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+}
+
+.experience-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.experience-item:nth-child(2) img,
 .experience-item:nth-child(3) img {
     object-position: bottom; /* Show the bottom part of the image */
 }
-        .education p {
-            font-family: 'Prata', serif;
-        }
+
+.education p {
+    font-family: 'Prata', serif;
+}
         #contact-wrapper {
         padding: 100px 20px;
         position: relative;
