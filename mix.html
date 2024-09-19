@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/png" href="./images/favicon.png">
-    <style> 
+    <style>
         body, html {
             margin: 0;
             padding: 0;
@@ -50,6 +50,65 @@
         .navbar .nav-buttons button:hover {
             background-color: #cccccc;
             color: #000000;
+        }
+
+        /* Mobile dropdown menu */
+        .navbar .nav-dropdown {
+            display: none; /* Hidden on desktop */
+            position: relative;
+        }
+        .navbar .dropdown-button {
+            background-color: #ffffff;
+            border: none;
+            color: #000000;
+            padding: 10px 15px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar .dropdown-button:hover {
+            background-color: #cccccc;
+            color: #000000;
+        }
+        .navbar .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+        }
+        .navbar .dropdown-content button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: none;
+            font-size: 1em;
+            cursor: pointer;
+            text-align: left;
+            color: #000000;
+        }
+        .navbar .dropdown-content button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .navbar .dropdown-button:focus + .dropdown-content,
+        .navbar .dropdown-content:hover {
+            display: block;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .navbar .nav-buttons {
+                display: none; /* Hide full nav buttons on mobile */
+            }
+            .navbar .nav-dropdown {
+                display: flex; /* Show dropdown button on mobile */
+            }
         }
         body {
             margin-top: 40px;
@@ -344,12 +403,26 @@
         <div class="logo">
             <img src="./images/IMG_2377.jpeg" alt="Your Logo">
         </div>
+
+        <!-- Navigation buttons for desktop -->
         <div class="nav-buttons">
             <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About</button>
             <button onclick="document.getElementById('videos').scrollIntoView({behavior: 'smooth'})">Videos</button>
             <button onclick="document.getElementById('pictures').scrollIntoView({behavior: 'smooth'})">Pictures</button>
             <button onclick="document.getElementById('education').scrollIntoView({behavior: 'smooth'})">Education and Experience</button>
             <button onclick="document.getElementById('contactme').scrollIntoView({behavior: 'smooth'})">Contact</button>
+        </div>
+
+        <!-- Dropdown for mobile -->
+        <div class="nav-dropdown">
+            <button class="dropdown-button">☰</button>
+            <div class="dropdown-content">
+                <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">About</button>
+                <button onclick="document.getElementById('videos').scrollIntoView({behavior: 'smooth'})">Videos</button>
+                <button onclick="document.getElementById('pictures').scrollIntoView({behavior: 'smooth'})">Pictures</button>
+                <button onclick="document.getElementById('education').scrollIntoView({behavior: 'smooth'})">Education and Experience</button>
+                <button onclick="document.getElementById('contactme').scrollIntoView({behavior: 'smooth'})">Contact</button>
+            </div>
         </div>
     </div>
     <div class="full-screen-image"></div>
