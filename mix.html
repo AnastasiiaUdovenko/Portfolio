@@ -574,6 +574,28 @@
 </div>
 
 <script>
+           // Toggle dropdown visibility on mobile
+        function toggleDropdown() {
+            var dropdownContent = document.querySelector('.dropdown-content');
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        }
+
+        // Close the dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-button')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
         var images = [
             "./images/hoop.jpeg", "./images/hoop1.JPEG", "./images/hoop2.JPEG", "./images/hoop3.jpeg", "./images/hoop4.jpg",
             "./images/hoop5.jpg", "./images/hoop6.jpg", "./images/hoop7.jpeg", "./images/hoop8.jpg", "./images/hoop9.jpg",
