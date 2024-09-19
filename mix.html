@@ -293,21 +293,22 @@
 
     .gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 10px;
         justify-content: center;
         padding: 20px;
     }
 
     .gallery img {
-        width: 100%;
-        height: auto;  /* Maintain the original aspect ratio */
+        max-width: 100%;
+        max-height: 100%;
+        margin: 10px;
         cursor: pointer;
         transition: transform 0.2s;
     }
 
     .gallery img:hover {
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
 
     .modal {
@@ -316,6 +317,7 @@
         align-items: center; 
         position: fixed;
         z-index: 2000;
+        padding-top: 0px;
         left: 0;
         top: 0;
         width: 100%;
@@ -333,8 +335,8 @@
     .close {
         color: #fff;
         position: absolute;
-        top: 20px;
-        right: 30px;
+        top: 10px;
+        right: 25px;
         font-size: 30px;
         font-weight: bold;
         cursor: pointer;
