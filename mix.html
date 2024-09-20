@@ -123,67 +123,132 @@
             text-align: center;
             color: #ffffff;
         }
+      /* Common Styles for Both Desktop and Mobile */
+    .about {
+        background-color: #ffffff;
+        color: #000000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+    }
+
+    .about .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: auto;
+    }
+
+    .about .left {
+        margin-right: 5px;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about .image {
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .about img {
+        width: 100%;
+    }
+
+    .about .right {
+        margin-left: 5px;
+        width: 70%;
+        flex: 1;
+    }
+
+    .about .right p {
+        font-size: 16px;
+    }
+
+    .about .text {
+        width: 100%;
+        height: auto;
+        margin-left: 20px;
+    }
+
+    .about .text-content {
+        padding: 0 20px;
+        font-size: 1.1em;
+        margin-top: 10px;
+    }
+
+    .about .text-content p {
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-family: 'Prata', serif;
+        font-size: 54px;
+        padding: 20px;
+        margin: 0;
+    }
+
+    h2 {
+        font-family: 'Prata', serif;
+    }
+
+    /* Mobile-Specific Styles */
+    @media (max-width: 768px) {
         .about {
-            background-color: #ffffff;
-            color: #000000;
-            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .about .container {
             flex-direction: column;
             align-items: center;
-            padding-top: 100px;
         }
-        .about .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 95%;
-            margin: auto;
+
+        .about .left, .about .right {
+            width: 100%;
+            text-align: center;
         }
-        .about .left {
-            margin-right: 5px;
-            width: 30%;
-            display: flex;
-            justify-content: center;
-            alight-items: center;
-        }
+
         .about .image {
-            overflow: hidden;
-            margin-bottom: 30px;
-            image-align: center;
-        }
-        .about img {
             width: 100%;
+            display: flex;
+            justify-content: center;
         }
-        .about .right {
-            margin-left: 5px;
-            width: 70%;
-            flex: 1;
+
+        .about .image img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            object-position: top;
+            margin: 20px 0;
         }
-        .about .right p {
-            font-size: 16px;
-        }
+
         .about .text {
-            width: 100%;
-            height: auto;
-            margin-left: 20px;
+            max-width: 800px;
+            text-align: center;
+            margin: 0 20px;
         }
-        .about .text-content {
-            padding: 0 20px;
-            font-size: 1.1em;
-            margin-top: 10px;
-        }
+
         .about .text-content p {
+            font-size: 1.1em;
             line-height: 1.4;
             margin-bottom: 20px;
         }
+
         h1 {
-            font-family: 'Prata', serif;
             font-size: 54px;
             padding: 20px;
-            margin: 0;
+            margin:0;
         }
+
         h2 {
-            font-family: 'Prata', serif;
-        }
+            front-family: 'Plata' serif;
+    }
         .videos {
             padding-top: 100px;
         }
@@ -437,7 +502,12 @@
         <div class="container">
             <div class="left">
                 <div class="image">
-                    <img src="./images/me.jpg" alt="me">
+                    <img 
+                    src="./images/me.jpg" 
+                    alt="me" 
+                    srcset="./images/circle1.JPEG 768w, ./images/me.jpg 1200w"
+                    sizes="(max-width: 768px) 150px, 100%"
+                >
                 </div>
             </div>
             <div class="right">
