@@ -124,40 +124,41 @@
             color: #ffffff;
         }
 /* =======================
-   Common Styles for Both Desktop and Mobile
+   Desktop Styles (Default)
    ======================= */
 .about {
     background-color: #ffffff;
     color: #000000;
     display: flex;
-    flex-direction: row; /* Set to row for desktop */
+    flex-direction: column;
     align-items: center;
-    padding: 100px 20px; /* Added horizontal padding for better spacing */
+    padding-top: 100px;
     box-sizing: border-box;
 }
 
 .about .container {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items to the start for proper layout */
-    width: 100%;
-    max-width: 1200px; /* Restrict maximum width for larger screens */
-    margin: 0 auto;
+    align-items: center;
+    width: 95%;
+    margin: auto;
     box-sizing: border-box;
 }
 
 .about .left {
+    margin-right: 5px;
     width: 30%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-right: 20px; /* Increased margin for better spacing */
+    align-items: center; /* Corrected typo */
     box-sizing: border-box;
 }
 
 .about .image {
     overflow: hidden;
-    width: 100%;
+    margin-bottom: 30px;
+    text-align: center; /* Replaced invalid 'image-align' */
+    box-sizing: border-box;
 }
 
 .about img {
@@ -167,6 +168,7 @@
 }
 
 .about .right {
+    margin-left: 5px;
     width: 70%;
     flex: 1;
     box-sizing: border-box;
@@ -174,8 +176,8 @@
 
 .about .right p {
     font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 1em;
+    line-height: 1.6; /* Added for better readability */
+    margin-bottom: 1em; /* Consistent spacing */
 }
 
 .about .text {
@@ -189,6 +191,7 @@
     padding: 0 20px;
     font-size: 1.1em;
     margin-top: 10px;
+    box-sizing: border-box;
 }
 
 .about .text-content p {
@@ -199,42 +202,60 @@
 h1 {
     font-family: 'Prata', serif;
     font-size: 54px;
-    padding: 20px 0;
-    margin: 0 0 20px 0; /* Added bottom margin for spacing */
-    text-align: center;
+    padding: 20px;
+    margin: 0;
+    text-align: center; /* Added for better alignment */
 }
 
 h2 {
     font-family: 'Prata', serif;
     font-size: 36px; /* Added font size for consistency */
-    text-align: center;
+    text-align: center; /* Added for better alignment */
 }
 
 /* =======================
-   Mobile-Specific Styles
+   Mobile Styles (Within Media Query)
    ======================= */
 @media (max-width: 768px) {
     .about {
-        flex-direction: column; /* Stack items vertically on mobile */
+        flex-direction: column; /* Stack items vertically */
         justify-content: center;
-        padding: 50px 20px; /* Adjusted padding for smaller screens */
-        min-height: auto; /* Removed min-height to allow content to define height */
+        padding-top: 100px;
+        min-height: 100vh;
+        box-sizing: border-box;
     }
 
     .about .container {
         flex-direction: column;
         align-items: center;
+        width: 95%;
+        margin: auto;
+        box-sizing: border-box;
     }
 
-    .about .left, .about .right {
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        box-sizing: border-box;
+    }
+
+    .about .left,
+    .about .right {
         width: 100%;
         text-align: center;
         margin: 0; /* Reset margins to prevent unwanted spacing */
+        box-sizing: border-box;
     }
 
     .about .image {
-        width: 150px; /* Set a fixed width for the image container */
-        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px; /* Adjusted for better spacing */
+        box-sizing: border-box;
     }
 
     .about .image img {
@@ -242,20 +263,22 @@ h2 {
         width: 150px;
         height: 150px;
         object-fit: cover;
-        object-position: center;
+        object-position: center; /* Changed from 'top' to 'center' for better appearance */
         margin: 0 auto; /* Center the image */
     }
 
     .about .text {
         max-width: 800px;
         text-align: center;
+        padding: 0 20px;
         margin: 20px 0; /* Adjusted margins for better spacing */
+        box-sizing: border-box;
     }
 
     .about .text-content p {
-        font-size: 1em; /* Slightly reduced font size for mobile */
         line-height: 1.4;
         margin-bottom: 20px;
+        font-size: 1.1em;
     }
 
     h1 {
@@ -267,7 +290,9 @@ h2 {
     h2 {
         font-family: 'Prata', serif; /* Corrected font-family */
         font-size: 28px; /* Adjusted font size for mobile */
+        text-align: center; /* Ensured consistent alignment */
     }
+}
 }
         .videos {
             padding-top: 100px;
